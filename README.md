@@ -226,83 +226,84 @@ The SDK includes 2 parts
 
 <b>Call the function corresponding that the SDK provides functionality for each operation:</b>
 ```
-　　Registration: 				ingame_sdk.callRegister();
-　　Log in:				       	ingame_sdk.callLogin();
-　　Log out: 					ingame_sdk.callLogout();
+　　Registration: 			    	ingame_sdk.callRegister();
+　　Log in:				        	ingame_sdk.callLogin();
+　　Log out: 					    ingame_sdk.callLogout();
 　　User information: 				ingame_sdk.callshowUserInfo();
-　　Payment: 				 	ingame_sdk.callPayment(String game_order); // game_order: Transaction code is created by Developer (less than 50 characters).
+　　Payment: 				    	ingame_sdk.callPayment(String game_order); // game_order: Transaction code is created by Developer (less than 50 characters).
 ```
 
 
 ####IV. Run SDK samples
 
 You can see the more detail in the attached sample code. 
+
 <table border="0">
-    <tr>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture4_zps7h9ax8od.png">
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture5_zpsnce3ybz6.png" width>
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture6_zpsuzqramsf.png" width>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <i>Login Method UI</i>
-        </td>
-        <td>
-            <i>Login UI</i>
-        </td>
-        <td>
-          <i> Registration UI </i>
-        </td>
-    </tr>
-    
-        <tr>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture7_zpspqowr2jh.png">
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture8_zpsnkkspvqy.png" width>
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture9_zpslkkqbbpc.png" width>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <i>Forgot Pass UI</i>
-        </td>
-        <td>
-            <i>User Information UI</i>
-        </td>
-        <td>
-          <i> Transaction Log UI </i>
-        </td>
-    </tr>
-    
-        <tr>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture10_zpsvz7fuw4b.png">
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture11_zpsfmaxax7g.png" width>
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture12_zpstgtkbzte.png" width>
-        </td>
-    </tr>
-    <tr>
-        <td textAlign="center">
-            <i>Payment Method UI</i>
-        </td>
-        <td textAlign="center">
-            <i>Payment via Card UI</i>
-        </td>
-        <td textAlign="center">
-          <i> Payment via Internet Banking UI </i>
-        </td>
-    </tr>
+<tr>
+<td width ="500px">
+    <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture4_zps7h9ax8od.png">
+</td>
+<td width ="500px">
+    <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture5_zpsnce3ybz6.png" width>
+</td>
+<td width ="500px">
+    <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture6_zpsuzqramsf.png" width>
+</td>
+</tr>
+<tr>
+<td>
+    <i>Login Method UI</i>
+</td>
+<td>
+    <i>Login UI</i>
+</td>
+<td>
+  <i> Registration UI </i>
+</td>
+</tr>
+
+<tr>
+<td width ="500px">
+    <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture7_zpspqowr2jh.png">
+</td>
+<td width ="500px">
+    <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture8_zpsnkkspvqy.png" width>
+</td>
+<td width ="500px">
+    <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture9_zpslkkqbbpc.png" width>
+</td>
+</tr>
+<tr>
+<td>
+    <i>Forgot Pass UI</i>
+</td>
+<td>
+    <i>User Information UI</i>
+</td>
+<td>
+  <i> Transaction Log UI </i>
+</td>
+</tr>
+
+<tr>
+<td width ="500px">
+    <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture10_zpsvz7fuw4b.png">
+</td>
+<td width ="500px">
+    <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture11_zpsfmaxax7g.png" width>
+</td>
+<td width ="500px">
+    <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture12_zpstgtkbzte.png" width>
+</td>
+</tr>
+<tr>
+<td textAlign="center">
+    <i>Payment Method UI</i>
+</td>
+<td textAlign="center">
+    <i>Payment via Card UI</i>
+</td>
+<td textAlign="center">
+  <i> Payment via Internet Banking UI </i>
+</td>
+</tr>
