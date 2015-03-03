@@ -152,6 +152,7 @@ The SDK includes 2 parts
 ```
 ###III. Declare variables, initialization and call SDK function from your application
 <b>Create ```Receiver.java``` to receive events from the SDK</b>
+
 ```
 　　private class GameReceiver extends IGReceiver {
 		
@@ -163,7 +164,8 @@ The SDK includes 2 parts
 		public void onLogoutSuccess() {
 		}
 	}
-	```
+```
+
 >Through the session variable you can get account information by calling the following functions:<br/>
 > ```session.getUserName()```: Username <br/>
 > ```session.getUserId()```: Account ID <br/>
