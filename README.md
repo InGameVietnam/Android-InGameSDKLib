@@ -1,5 +1,5 @@
 Other languages: [Vietnamese](README_VI.md)
-##DOCUMENT FOR INTEGRATED SYSTEM INGAME SDK 1.0 
+###DOCUMENT FOR INTEGRATED SYSTEM INGAME SDK 1.0 
 
 **Introduction**
 
@@ -19,9 +19,9 @@ InGame SDK is user and payment integrated system for your mobile application. Th
 
 ### I. Download SDK
 
-** Download InGame SDK for Android here: https://github.com/ingamevietnam/android-ingamesdklib/archive/master.zip
+Download InGame SDK for Android here: https://github.com/ingamevietnam/android-ingamesdklib/archive/master.zip
 
-Or if you use any git tool, clone this url: https://github.com/ingamevietnam/android-ingamesdklib.git
+Or use any git tool, clone this url: https://github.com/ingamevietnam/android-ingamesdklib.git
 
 ###II. Integrate & configure SDK
 ####A. Integrate: 
@@ -51,7 +51,7 @@ The SDK includes 2 parts
 <b><i>*Get ```<your_facebook_application_id>``` value from Facebook</b></i><br/>
 >1> First, log into your https://developers.facebook.com/<br/>
 >2> Next, click on <b>My Apps</b> and find the application that you'd like to review.<br/>
->3> The <your_facebook_application_id> under the section <b>App ID</b><br/>
+>3> The ```<your_facebook_application_id>``` under the section <b>App ID</b><br/>
 >![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture3_zpsajdtkwmv.png)
 
 <b>Notice] The values be located in the < > you need to replace them as follows:</b>
@@ -226,10 +226,10 @@ The SDK includes 2 parts
 
 <b>Call the function corresponding that the SDK provides functionality for each operation:</b>
 ```
-　　Registration: 			    	ingame_sdk.callRegister();
-　　Log in:				        	ingame_sdk.callLogin();
-　　Log out: 					    ingame_sdk.callLogout();
-　　User information: 				ingame_sdk.callshowUserInfo();
+　　Registration: 			    ingame_sdk.callRegister();
+　　Log in:				        ingame_sdk.callLogin();
+　　Log out: 						ingame_sdk.callLogout();
+　　User information: 			ingame_sdk.callshowUserInfo();
 　　Payment: 				    	ingame_sdk.callPayment(String game_order); // game_order: Transaction code is created by Developer (less than 50 characters).
 ```
 
