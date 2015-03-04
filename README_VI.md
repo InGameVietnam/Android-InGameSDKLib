@@ -19,22 +19,23 @@ InGameSDK là hệ thống tích hợp tài khoản và thanh toán cho ứng d�
 
 ### I. Tải hệ thống SDK
 
-** Tải InGame SDK tại địa chỉ: https://github.com/ingamevietnam/android-ingamesdklib/archive/master.zip
+Tải InGame SDK tại địa chỉ: https://github.com/ingamevietnam/android-ingamesdklib/archive/master.zip
 
 Hoặc sử dụng công cụ git tool để clone từ đường dẫn này: https://github.com/ingamevietnam/android-ingamesdklib.git
 
 ###II. Các bước tích hợp và cấu hình
 ####A. Tích hợp: 
-Bộ SDK khi tải về bao gồm 2 phần 
+Bộ SDK khi tải về bao gồm 2 phần:
+
+![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture1_zpsczrmwmy4.png)
+   
+  <i>Cấu trúc thư mục</i>
+
 - <b>Các thư viện </b>(requirement libraries): là các tập tin có đuôi <b>*.jar</b> bên trong thư mục <b>libs/</b> 
   
 Sao chép các tập tin <b>*.jar</b> này vào thư mục <b>libs/</b>  trong project của bạn <i>(nếu chưa có thư mục <b>libs/</b>  bạn có thể tạo mới sau đó chép những file này vào)</i>
 
 - <b>Resource </b>(res folder): là những tài nguyên cần thiết của thư viện <b>ingamesdk1.0.jar </b>
-
-![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture1_zpsczrmwmy4.png)
-   
-  <i>Cấu trúc thư mục</i>
     
 Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>res/</b> trong ứng dụng của bạn.
 
@@ -226,11 +227,11 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 
 <b>Gọi hàm tương ứng với các chức năng mà SDK cung cấp cho từng thao tác:</b>
 ```
-　  Đăng ký: 				ingame_sdk.callRegister();
-　　Đăng nhập:				       ingame_sdk.callLogin();
-　　Đăng xuất: 					 ingame_sdk.callLogout();
-　　Hiển thị thông tin tài khoản: 			ingame_sdk.callshowUserInfo();
-　　Thanh toán: 				 	ingame_sdk.callPayment(String game_order); // game_order:Mã giao dịch do 
+　  Đăng ký: 							  ingame_sdk.callRegister();
+　　Đăng nhập:				       		ingame_sdk.callLogin();
+　　Đăng xuất: 							ingame_sdk.callLogout();
+　　Hiển thị thông tin tài khoản: 		ingame_sdk.callshowUserInfo();
+　　Thanh toán: 							 ingame_sdk.callPayment(String game_order); // game_order:Mã giao dịch do 
 　　Nhà phát triển tự tạo ra (nhỏ hơn 50 ký tự)..
 ```
 
