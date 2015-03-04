@@ -11,7 +11,7 @@ InGame SDK is user and payment integrated system for your mobile application. Th
 
 ​2. Integrate & configure SDK
 
-​3. Declare variables, initialization and call SDK function from your application
+​3. Declare variables, initiate and call SDK function from your application
 
 ​4. Run SDK samples
 
@@ -150,7 +150,7 @@ The SDK includes 2 parts
 　　　　...........................
 　　</application>
 ```
-###III. Declare variables, initialization and call SDK function from your application
+###III. Declare variables, initiate and call SDK function from your application
 <b>Create ```Receiver.java``` to receive events from the SDK</b>
 
 ```
