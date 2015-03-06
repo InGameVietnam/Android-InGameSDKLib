@@ -26,9 +26,9 @@ Or use any git tool, clone this url: https://github.com/ingamevietnam/android-in
 ###II. Integrate & configure SDK
 ####A. Integrate: 
 
-   ![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture1_zpsczrmwmy4.png)
-   
-    <i>The directory structure</i>
+  ![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture1_zpsczrmwmy4.png)
+
+<i>The directory structure</i>
 
 The SDK includes 2 parts 
 - <b>Requirement libraries:</b>  are files have the extension <b>*.jar</b> inside <b>libs/</b> folder: 
