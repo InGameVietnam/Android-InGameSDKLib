@@ -1,5 +1,5 @@
 Other languages: [Vietnamese](README_VI.md)
-###DOCUMENT FOR INTEGRATED SYSTEM INGAME SDK 1.0 
+###DOCUMENT FOR INTEGRATED SYSTEM INGAMESDK
 
 **Introduction**
 
@@ -25,18 +25,24 @@ Or use any git tool, clone this url: https://github.com/ingamevietnam/android-in
 
 ###II. Integrate & configure SDK
 ####A. Integrate: 
+
+   ![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture1_zpsczrmwmy4.png)
+   
+    <i>The directory structure</i>
+
 The SDK includes 2 parts 
 - <b>Requirement libraries:</b>  are files have the extension <b>*.jar</b> inside <b>libs/</b> folder: 
   
-    Copy these <b>*.jar</b> files to <b>libs/</b> folder in your application <i>(If no directory libs / you can create)</i>
+    Copy these <b>*.jar</b> files to <b>libs/</b> folder in your application <i>(If the libs directory does not exist, you can create it.)</i>
 
-- <b>Resources :</b> The resources needed by the library <b>ingamesdk1.0.jar</b> 
+    Import <b>fbsdk.jar</b> and <b>ingamesdk.jar</b> into your project
 
-    ![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture1_zpsczrmwmy4.png)
-   
-    <i>The directory structure</i>
+	![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture15_zpswkboxnst.png)
+
+
+- <b>Resources :</b> The resources needed by the library <b>ingamesdk.jar</b> 
     
-     Same as above you simply copy and paste the folder <b>res/</b> in your application.
+     You simply copy and paste the folder <b>res/</b> in your application.
 
 ####B. Configure:
 
