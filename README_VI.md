@@ -34,10 +34,6 @@ Bộ SDK khi tải về bao gồm 2 phần:
 - <b>Các thư viện </b>(requirement libraries): là các tập tin có đuôi <b>*.jar</b> bên trong thư mục <b>libs/</b> 
   
 Sao chép các tập tin <b>*.jar</b> này vào thư mục <b>libs/</b>  trong project <i>(nếu chưa có thư mục <b>libs/</b>  bạn có thể tạo mới sau đó chép những file này vào)</i>
-
-Import <b>fbsdk.jar</b> và <b>ingamesdk.jar</b> vào project
-
-![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture15_zpswkboxnst.png)
 	
 - <b>Resource </b>(res folder): là những tài nguyên cần thiết của thư viện <b>ingamesdk.jar </b>
     
