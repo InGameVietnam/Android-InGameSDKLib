@@ -63,6 +63,8 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 > Thay ```<your_package_name>``` bằng ```packagename của ứng dụng```.<br/>
 > Thay ```<your_facebook_application_id>``` bằng ```facebook app id``` của bạn.<br/>
 > Thay ```<application_license_key>```bằng ```giấy phép ứng dụng (license key)``` của bạn.<br/>
+> Thay ```<ingame_application_id>```bằng ```app id được cấp bởi ingame``` của bạn.<br/>
+> Thay ```<ingame_application_key>```bằng ```app key được cấp bởi ingame``` của bạn.<br/>
 
 
 
@@ -73,6 +75,8 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 ``` 
 　　　　<string name="facebook_appId"><your_facebook_application_id></string>
 　　　　<string name="google_license_key"><application_license_key></string>
+　　　　<string name="App_Id"><ingame_application_id></string>
+　　　　<string name="App_Key"><ingame_application_key></string>
 ``` 
 <b>Cấu hình AndroidMainfest.xml</b>
 
@@ -80,6 +84,7 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 -   Thêm các thẻ ```<permission>``` để cấp quyền truy cập cho hệ thống:
 
 ```
+    <uses-permission android:name="android.permission.SEND_SMS" />
 　　<uses-permission android:name="android.permission.INTERNET" />
 　　<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 　　<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -131,6 +136,10 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 　　　　<meta-data
 　　　　　　android:name="com.IngameSDK.GoogleIAPKey"
 　　　　　　android:value="@string/google_license_key" />
+　　　　<meta-data android:name="com.IngameSDK.AppId" 
+　　　　    android:value="@string/App_Id" />
+        <meta-data android:name="com.IngameSDK.AppKey" 
+            android:value="@string/App_Key" />
 　　　　...........................
 　　</application>
 ```
@@ -181,15 +190,13 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 　　
 <b>Khai báo các biến sau vào bên trong lớp Activity chính của ứng dụng:</b>
 
-	public String app_id = "911fe9dbd0f94625b4b591301c0f3818"; // ID ứng dụng của bạn
-	public String app_key = "a2de0d67a7aecbcc89293fbed6712b1a"; // Key ứng dụng của bạn
 	private GameReceiver game_receiver = new GameReceiver();
 	private IntentFilter filter = new IntentFilter();
 	public static InGameSDK ingame_sdk = InGameSDK.getInstance(); // instance của InGameSDK
 　　
 <b>Thiết lập các giá trị cho InGameSDK bên trong hàm onCreate(...)</b>
 
-	ingame_sdk.init(this, true, true, callback_url, this.app_id, this.app_key);
+	ingame_sdk.init(this, true, true, callback_url);
 
 <b>Các tham số của hàm ingame_sdk.init(...)</b>
 
@@ -201,8 +208,6 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 >```isButton```: Tham số sử dụng nút phím tắt của SDK<br/>
 >```isAutoLogin```: Tham số tự động đăng nhập<br/>
 >```callback_url```: Đường link gọi callback của Server<br/>
->```app_id```: ID ứng dụng của bạn được cấp bởi Ingame<br/>
->```app_key```: Key ứng dụng của bạn được cấp bởi Ingame<br/>
 
 <b>Thêm các xử lý sau vào tương ứng từng hàm</b>
 ```
