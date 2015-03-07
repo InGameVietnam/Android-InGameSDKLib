@@ -60,10 +60,12 @@ The SDK includes 2 parts
 >3> The ```<your_facebook_application_id>``` under the section <b>App ID</b><br/>
 >![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture3_zpsajdtkwmv.png)
 
-<b>Notice] The values be located in the < > you need to replace them as follows:</b>
+<b>[Notice] The values be located in the < > you need to replace them as follows:</b>
 > Replace ```<your_package_name>``` with your ```application packagename```.<br/>
 > Replace ```<your_facebook_application_id>``` with your ```facebook app id```.<br/>
 > Replace ```<application_license_key>``` with your ```license key```.<br/>
+> Replace ```<ingame_application_id>``` with your ```app id supplied by ingame```.<br/>
+> Replace ```<ingame_application_key>``` with your ```app key supplied by ingame```.<br/>
 
 
 
@@ -74,6 +76,8 @@ The SDK includes 2 parts
 ``` xml
 　　　　<string name="facebook_appId"><your_facebook_application_id></string>
 　　　　<string name="google_license_key"><application_license_key></string>
+　　　　<string name="App_Id"><ingame_application_id></string>
+　　　　<string name="App_Key"><ingame_application_key></string>
 ``` 
 <b>Configure AndroidMainfest.xml</b>
 
@@ -81,6 +85,7 @@ The SDK includes 2 parts
 -   Add ```<permission>``` tags to grant access to the system:
 
 ```
+    <uses-permission android:name="android.permission.SEND_SMS" />
 　　<uses-permission android:name="android.permission.INTERNET" />
 　　<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 　　<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -132,6 +137,10 @@ The SDK includes 2 parts
 　　　　<meta-data
 　　　　　　android:name="com.IngameSDK.GoogleIAPKey"
 　　　　　　android:value="@string/google_license_key" />
+　　　　<meta-data android:name="com.IngameSDK.AppId" 
+　　　　    android:value="@string/App_Id" />
+	<meta-data android:name="com.IngameSDK.AppKey" 
+	    android:value="@string/App_Key" />
 　　　　...........................
 　　</application>
 ```
@@ -182,15 +191,13 @@ The SDK includes 2 parts
 　　
 <b>Declare the following variables inside the main Activity class of applications:</b>
 
-	public String app_id = "911fe9dbd0f94625b4b591301c0f3818"; // your Application ID
-	public String app_key = "a2de0d67a7aecbcc89293fbed6712b1a"; // your Application Key
 	private GameReceiver game_receiver = new GameReceiver();
 	private IntentFilter filter = new IntentFilter();
 	public static InGameSDK ingame_sdk = InGameSDK.getInstance(); // instance of InGameSDK
 　　
 <b>Set the values to the function InGameSDK inside onCreate(...)</b>
 
-	ingame_sdk.init(this, true, true, callback_url, this.app_id, this.app_key);
+	ingame_sdk.init(this, true, true, callback_url);
 
 <b>The parameters of ingame_sdk.init(...)</b>
 
@@ -202,8 +209,6 @@ The SDK includes 2 parts
 >```isButton```: use SDK shorcut Button (True/False)<br/>
 >```isAutoLogin```: use Auto login function (True/False)<br/>
 >```callback_url```: The call back link of your server<br/>
->```app_id```: Your application ID issued by Ingame<br/>
->```app_key```: Your application key issued by Ingame<br/>
 
 <b>Add the following to the corresponding handle each functions</b>
 ```
