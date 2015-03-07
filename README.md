@@ -35,11 +35,6 @@ The SDK includes 2 parts
   
     Copy these <b>*.jar</b> files to <b>libs/</b> folder in your application <i>(If the libs directory does not exist, you can create it.)</i>
 
-    Import <b>fbsdk.jar</b> and <b>ingamesdk.jar</b> into your project
-
-	![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture15_zpswkboxnst.png)
-
-
 - <b>Resources :</b> The resources needed by the library <b>ingamesdk.jar</b> 
     
      You simply copy and paste the folder <b>res/</b> in your application.
