@@ -42,13 +42,13 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 ####B. Cấu hình:
 
 <b>[Quan trọng] Bạn cần có thông tin sau đây trước khi tiến hành cấu hình:</b> <br/>
-> <b><i>*Lấy giá trị``` <application_license_key>``` từ Google</b></i><br/>
+<!-- <b><i>*Lấy giá trị``` <application_license_key>``` từ Google</b></i><br/>
 >  1> Đăng nhập vào <b>Google Play Developer Console</b> của bạn.<br/>
 >  2>  Nhấn chọn <b>All Applications</b> và tìm ứng dụng bạn cần lấy thông tin.<br/>
 > 3>Sau đó, đến mục <b>Services and APIs</b><br/>
 >![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture2_zpsoquddje9.jpg)<br/>
  Bạn sẽ tìm thấy giấy phép của ứng dụng (license key) dưới mục <b>Your License Key For this Application</b>.
->
+>-->
 <b><i>*Lấy giá trị ```<your_facebook_application_id>```  từ Facebook</b></i><br/>
 >1> Đăng nhập vào tài khoản Facebook của bạn tại địa chỉ https://developers.facebook.com/<br/>
 >2> Nhấn chọn mục <b>My Apps</b> và chọn ứng dụng bạn cần lấy thông tin.<br/>
