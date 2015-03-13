@@ -49,7 +49,7 @@ The SDK includes 2 parts
 >![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture2_zpsoquddje9.jpg)<br/>
  You will find your license key under the section labeled <b>Your License Key For this Application</b>.
 >-->
-<b><i>*Get ```<your_facebook_application_id>``` value from Facebook</b></i><br/>
+><b><i>*Get ```<your_facebook_application_id>``` value from Facebook</b></i><br/>
 >1> First, log into your https://developers.facebook.com/<br/>
 >2> Next, click on <b>My Apps</b> and find the application that you'd like to review.<br/>
 >3> The ```<your_facebook_application_id>``` under the section <b>App ID</b><br/>
