@@ -41,14 +41,14 @@ The SDK includes 2 parts
 
 ####B. Configure:
 
-<b>[Notice] You need the following information before proceeding with the configuration:</b> <br/>
+<!--<b>[Notice] You need the following information before proceeding with the configuration:</b> <br/>
 > <b><i>*Get ```<application_license_key>``` value from Google</b></i><br/>
 >  1> First, log into your <b>Google Play Developer Console</b>.<br/>
 >  2> Next, click on <b>All Applications</b> and find the application that you'd like to review.<br/>
 > 3>After that, go to the section <b>Services and APIs</b><br/>
 >![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture2_zpsoquddje9.jpg)<br/>
  You will find your license key under the section labeled <b>Your License Key For this Application</b>.
->
+>-->
 <b><i>*Get ```<your_facebook_application_id>``` value from Facebook</b></i><br/>
 >1> First, log into your https://developers.facebook.com/<br/>
 >2> Next, click on <b>My Apps</b> and find the application that you'd like to review.<br/>
