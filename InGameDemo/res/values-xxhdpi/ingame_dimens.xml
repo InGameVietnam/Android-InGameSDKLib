@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- declear for dimen -->
+    <dimen name="layout_padding">30dp</dimen>
+    <dimen name="zero_dp">0dp</dimen>
+    
+    <dimen name="text_size_5">5sp</dimen>
+    <dimen name="text_size_8">8sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+
+</resources>

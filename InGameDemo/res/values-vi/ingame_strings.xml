@@ -1,0 +1,128 @@
+<resources>
+
+    <string name="version">Version 1.0</string>
+    <string name="login">Đăng nhập</string>
+    <string name="yes">Chấp nhận</string>
+    <string name="no">Thôi</string>
+    <string name="ACCOUNT">ACCOUNT</string>
+    <string name="LOG_OUT">LOG OUT</string>
+    <string name="submit">Xác nhận</string>
+    <string name="refresh">Tải lại</string>
+    <string name="login_title">Điền tên tài khoản và mật khẩu</string>
+    <string name="fill_info">Điền thông tin của bạn</string>
+    <string name="login_username">Tài khoản</string>
+    <string name="login_password">Mật khẩu</string>
+    <string name="login_login_by_other_way">Đăng nhập bằng cách khác</string>
+    <string name="login_forgot_password">Quên mật khẩu</string>
+    <string name="please_wait">Vui lòng chờ...</string>
+    <string name="invalid_email">Email không hợp lệ.</string>
+    <string name="invalid_phone">Số điện thoại không hợp lệ.</string>
+    <string name="email">Email (Không bắt buộc)</string>
+    <string name="phone">Điện thoại (Không bắt buộc)</string>
+    <string name="email_phone">Vui lòng nhập Email của bạn</string>
+
+    <!-- Register -->
+    <string name="register">Đăng ký</string>
+    <string name="register_repassword">Nhập lại mật khẩu</string>
+    <string name="register_quick_login">Đăng nhập nhanh</string>
+    <string name="username_empty">Tên đăng nhập không được phép rỗng</string>
+    <!--  -->
+
+    <string name="TXT_CHOOSE_LOGIN_METHOD">Chọn cách thức đăng nhập</string>
+    <string name="TXT_CHOOSE_PAYMENT_METHOD">Chọn cách thức thanh toán</string>
+    <string name="TXT_VERSION">Phiên bản 1.2.0</string>
+    <string name="TXT_REGISTER">Tạo tài khoản mới</string>
+    <string name="DEFAULT_GAME_NAME">Siêu Nhân Đại Chiến</string>
+    <string name="DEFAULT_PAYMENT_USERNAME">Tên người dùng</string>
+    <string name="TXT_MONEY">Tiền:</string>
+    <string name="DEFAULT_MONEY_VALUE">5,000,000</string>
+    <string name="CURRENCY">VND</string>
+    <string name="txt_login_facebook">Facebook</string>
+    <string name="txt_login_google">Google</string>
+    <string name="txt_login_ingame">Ingame</string>
+    <string name="txt_login_quick">Đ.Nhập nhanh</string>
+    <string name="txt_payment_card">Thẻ cào</string>
+    <string name="txt_payment_bank">E-Banking</string>
+    <string name="txt_payment_google">Google</string>
+    <string name="TXT_TAB_USERINFOR">Thông tin tài khoản</string>
+    <string name="TXT_TAB_TRANSACTION">Lịch sử thanh toán</string>
+    <string name="TXT_LOGING_IN">Đang đăng nhập.....</string>
+    <!-- show user infor -->
+    <string name="txt_suggest_update_info">[Cảnh báo] Bạn nên thay đổi thông tin tài khoản cho lần đăng nhập sau này</string>
+    <string name="userinfo_user_name">Tài khoản</string>
+    <string name="userinfo_update_password">Bạn có muốn thay đổi mật khẩu ?</string>
+    <string name="userinfo_new_pass">Mật khẩu mới</string>
+    <string name="userinfo_new_pass2">Nhập lại mật khẩu</string>
+    <string name="userinfo_button_update">Cập nhật</string>
+    <string name="userinfo_button_skip">Bỏ qua</string>
+    <string name="transaction_default_no_log">Bạn chưa có lịch sử thanh toán</string>
+    <string name="network_problem">Không thể kết nối đến máy chủ. \nVui lòng thử lại sau.</string>
+    <string name="request_timeout">Quá thời gian kết nối. Vui lòng kiểm tra kết nối và thử lại.</string>
+    <string name="no_network">Không thể kết nối đến máy chủ. Vui lòng kiểm tra kết nối Wifi/3G.</string>
+    <string name="captcha_input">Nhập mã xác nhận</string>
+    <string name="captcha">Mã xác nhận</string>
+    <string name="payment">Thanh toán</string>
+    <string name="payment_via">Thanh toán bằng</string>
+    <string name="phone_card">Thẻ cào điện thoại</string>
+    <string name="choose_username">Vui lòng chọn tài khoản</string>
+    <string name="DELETE_USER_QUESTION">Bạn có thật sự muốn xóa tài khoản này?</string>
+    <string name="network_problem_title">Lỗi mạng</string>
+    <string name="LOGIN_SUCCESS">Đăng nhập thành công!</string>
+    <string name="LOGOUT_SUCCESS">Đăng xuất thành công!</string>
+    <string name="UPDATED_INFO_SUCCESS">Cập nhật thông tin thành công!</string>
+    <string name="account_validate1">Tên tài khoản chỉ đồng ý các ký tự a-z, 0-9.</string>
+    <string name="account_validate2">Tên tài khoản cần phải có chiều dài từ 5 đến 16 ký tự.</string>
+    <string name="account_not_empty">Tên tài khoản không được phép rỗng.</string>
+    <string name="password_validate1">Mật khẩu chỉ đồng ý các ký tự a-z, 0-9.</string>
+    <string name="password_validate2">Mật khẩu cần phải có chiều dài từ 5 đến 16 ký tự.</string>
+    <string name="captcha_validate">Bạn phải nhập đúng các ký tự trong hình trên.</string>
+    <string name="not_empty_acc_pass">Tài khoản và mật khẩu không được phép để trống.</string>
+    <string name="not_same_pass">Mật khẩu và mật khẩu nhập lại không giống nhau.</string>
+    <string name="not_empty_info">Phải điền đầy đủ các thông tin.</string>
+    <string name="copied">Đã sao chép.</string>
+    <string name="update_info">Vui lòng cập nhật thông tin của bạn</string>
+    <string name="phone_used">Bạn có đảm bảo số điện thoại hoặc email có thể dùng ?</string>
+    <string name="game_order">Trường game_order phải có chiều dài nhỏ hơn 50 ký tự</string>
+    <string name="term_title">Điều khoản sử dụng</string>
+       <string name="term_agree">Tôi đồng ý với các điều khoản</string>
+
+    <!-- PAYMENT METHODS -->
+    <string name="payment_via_card">THẺ CÀO</string>
+    <string name="payment_via_bank">NGÂN HÀNG</string>
+    <string name="payment_via_google">GOOGLE IAP</string>
+    <string name="payment_via_apple">APPLE IAP</string>
+    <string name="payment_via_wp">WINDOWS PHONE IAP</string>
+
+    <!-- card payment -->
+    <string name="invalid_field_notification">Thông tin thẻ chưa hợp lệ, vui lòng kiểm tra và thử lại</string>
+    <string name="card_type">Chọn loại thẻ cảo</string>
+    <string name="txt_Method_Name_Card">Thanh toán qua thẻ cào</string>
+    <string name="txt_fill_card_info">Vui lòng nhập thông tin thẻ cào:</string>
+    <string name="txt_choose_card_type">Vui lòng cung cấp thông tin thẻ cào:</string>
+    <string name="txt_card_serial">Vui lòng nhập số serial</string>
+    <string name="txt_card_pinnumber">Vui lòng nhập mã thẻ</string>
+    <string name="txt_card_info">Quy định chuyển đổi</string>
+    <string name="paymentSuccessful">Thanh toán thành công</string>
+    <string name="captcha_charactor">Nhập đúng các ký tự trong hình trên</string>
+
+    <!-- bank payment -->
+    <string name="prompt_spinner_bank">[Chọn loại ngân hàng...]</string>
+    <string name="txt_Method_Name_Bank">Thanh toán qua ngân hàng</string>
+    <string name="txt_choose_bank_type">Chọn loại ngân hàng</string>
+    <string name="invalid_bank_notification">Bạn chưa chọn loại ngân hàng, vui lòng kiểm tra và thử lại!!</string>
+    <string name="txt_bank_info">Chọn gói tiền:</string>
+    <string name="confirm_bank_payment">Nhấn xác nhận sau khi đã hoàn tất thanh toán trên website</string>
+
+    <!-- paymnet via google -->
+    <string name="txt_Method_Name_Google">Thanh toán qua Google</string>
+    <string name="transaction_confirm">Thông tin giao dịch </string>
+
+    <string name="txt_Title_ForgotPass">Quên Mật Khẩu</string>
+	<string name="txt_ExpandBtn_Mail">Lấy lại mật khẩu thông qua Email</string>
+	<string name="txt_Expand_Decription_Mail">Nhập email của bạn để cấp lại mật khẩu. Bạn có thể phải check trong thư mục spam.</string>
+	<string name="txt_ExpandBtnText_Mail">Gửi</string>
+	
+	<string name="txt_ExpandBtn_SMS">Lấy lại mật khẩu thông qua SMS</string>
+	<string name="txt_Expand_Decription_SMS">Soạn Tin nhắn với cú pháp: <br><br><b>Ingame MK</b> [<b>Tên_Tài_Khoản</b>] gửi đến <b>8698</b></br></br><br><br>Chỉ hỗ trợ cho những nhà mạng: <b>Viettel, Vinaphone, Mobiphone, VietnamMobi.</b></br></br><br><br><b>+ </b>Phí 500 VNĐ/sms</br></br></string>
+	<string name="txt_ExpandBtnText_SMS">Gửi SMS</string>
+</resources>
