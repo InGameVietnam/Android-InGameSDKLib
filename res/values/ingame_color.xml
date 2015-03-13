@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--declear for color -->
+	<color name="black">#99000000</color>
+    <color name="bg_header_color">#ffbdb9b9</color>
+    <color name="black_text_color">#000000</color>
+    <color name="button_green">#56b436</color>
+    <color name="button_green_pressed">#6be93f</color>
+    <color name="login_btnlogin_enabled">#F57D20</color>
+    <color name="button_disabled">#878787</color>
+    <color name="login_btnlogin_pressed">#ffa45d</color>
+    <color name="bg_textview">#35000000</color>
+    <color name="card_normal">#ff3569ae</color>
+    <color name="card_pressed">#ff689fe7</color>
+    <color name="tabs_normal">#ffbdb9b9</color>
+    <color name="tabs_pressed">#ffebeff2</color>
+    <color name="bank_normal">#ff58c3f0</color>
+    <color name="bank_pressed">#ff8ad9fa</color>
+    <color name="google_normal">#ffe64c66</color>
+    <color name="google_pressed">#ffe67b8d</color>
+    <color name="quick_normal">#ff344b5d</color>
+    <color name="quick_pressed">#ff6e808e</color>
+    <color name="link_text_light">#ffffffff</color>
+    <color name="warning">#ffff0000</color>
+    <color name="color_black">#000000</color>
+    <color name="color_white">#ffffff</color>
+</resources>

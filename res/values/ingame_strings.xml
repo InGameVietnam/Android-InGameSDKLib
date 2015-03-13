@@ -1,0 +1,128 @@
+<resources>
+
+    <string name="version">Version 1.0</string>
+    <string name="login">Login</string>
+    <string name="yes">OK</string>
+    <string name="no">NO</string>
+    <string name="ACCOUNT">ACCOUNT</string>
+    <string name="LOG_OUT">LOG OUT</string>
+    <string name="email">Email (optional)</string>
+    <string name="phone">Phonenumber (optional)</string>
+    <string name="email_phone">Please enter your Email</string>
+    <string name="submit">Submit</string>
+    <string name="refresh">Refresh</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="login_title">Fill out your name and password</string>
+    <string name="fill_info">Fill out your information</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_login_by_other_way">Login by other ways</string>
+    <string name="login_forgot_password">Forgot password</string>
+    <string name="invalid_email">Email is invalid.</string>
+    <string name="invalid_phone">Phone number is invalid.</string>
+    <!-- Register -->
+    <string name="register">Register</string>
+    <string name="register_repassword">Re-enter password</string>
+    <string name="register_quick_login">Quick login</string>
+    <string name="username_empty">Tên đăng nhập không được phép rỗng</string>
+    <string name="TXT_CHOOSE_LOGIN_METHOD">Choose login method</string>
+    <string name="TXT_CHOOSE_PAYMENT_METHOD">Choose payment method</string>
+    <string name="TXT_VERSION">Version 1.2.0</string>
+    <string name="TXT_REGISTER">Register new account</string>
+    <string name="DEFAULT_GAME_NAME">Siêu Nhân Đại Chiến</string>
+    <string name="DEFAULT_PAYMENT_USERNAME">Default UsrName</string>
+    <string name="TXT_MONEY">Money:</string>
+    <string name="DEFAULT_MONEY_VALUE">5,000,000</string>
+    <string name="CURRENCY">VND</string>
+    <string name="txt_login_facebook">Facebook</string>
+    <string name="txt_login_google">Google</string>
+    <string name="txt_login_ingame">Ingame</string>
+    <string name="txt_login_quick">Quick login</string>
+    <string name="txt_payment_card">Card</string>
+    <string name="txt_payment_bank">E-Banking</string>
+    <string name="txt_payment_google">Google</string>
+    <string name="TXT_TAB_USERINFOR">User Information</string>
+    <string name="TXT_TAB_TRANSACTION">Transaction Log</string>
+    <string name="TXT_LOGING_IN">Loging.....</string>
+    <!-- show user infor -->
+    <string name="userinfo_user_name">Username</string>
+    <string name="userinfo_update_password">Do you wanna change password?</string>
+    <string name="userinfo_new_pass">New password</string>
+    <string name="userinfo_new_pass2">Re-enter password</string>
+    <string name="userinfo_button_update">Update</string>
+    <string name="userinfo_button_skip">Skip</string>
+    <string name="txt_suggest_update_info">[Warning] You should change account information for the next login time</string>
+    <string name="transaction_default_no_log">You have not made any payment</string>
+    <string name="network_problem">Cannot connect to the server. \nPlease try again later.</string>
+    <string name="request_timeout">Request timeout. Please try again later.</string>
+    <string name="no_network">Cannot connect to the server. Please check your Wifi/3G connection and try again.</string>
+    <string name="captcha_input">Input captcha</string>
+    <string name="captcha">captcha</string>
+    <string name="payment">Payment</string>
+    <string name="payment_via">Payment via</string>
+    <string name="phone_card">Phone card</string>
+    <string name="choose_username">Please select an account</string>
+    <string name="DELETE_USER_QUESTION">Want to delete this account?</string>
+    <string name="network_problem_title">Network Error</string>
+    <string name="LOGIN_SUCCESS">Logged in successfully!</string>
+    <string name="LOGOUT_SUCCESS">Logged out successfully!</string>
+    <string name="UPDATED_INFO_SUCCESS">Updated successfully!</string>
+    <string name="account_validate1">Only accept a-z, 0-9 characters for account name.</string>
+    <string name="account_validate2">The account name required length from 5 to 16 characters.</string>
+    <string name="account_not_empty">The account can not blank.</string>
+    <string name="password_validate1">Only accept a-z, 0-9 characters for password.</string>
+    <string name="password_validate2">The password required length from 5 to 16 characters.</string>
+    <string name="captcha_validate">Input the characters in the image above.</string>
+    <string name="not_empty_acc_pass">The account and password can not blank.</string>
+    <string name="not_same_pass">Password and re-password is not the same.</string>
+    <string name="not_empty_info">Must complete information.</string>
+    <string name="copied">Copied to clipboard.</string>
+    <string name="update_info">Please update your information</string>
+    <string name="phone_used">Are you sure that the phone number or email still available ?</string>
+    <string name="game_order">The length of game_order field must less than 50 characters</string>
+    <string name="term_title">Terms of Use</string>
+    <string name="term_agree">I agree to the Terms</string>
+    
+    
+    
+    <!-- PAYMENT METHODS -->
+    <string name="payment_via_card">CARD</string>
+    <string name="payment_via_bank">BANK</string>
+    <string name="payment_via_google">GOOGLE IAP</string>
+    <string name="payment_via_apple">APPLE IAP</string>
+    <string name="payment_via_wp">WINDOWS PHONE IAP</string>
+
+    <!-- card payment -->
+    <string name="invalid_field_notification">Card info is invalid, please check and try again</string>
+    <string name="card_type">Choose type of card</string>
+    <string name="txt_Method_Name_Card">Payment via Card</string>
+    <string name="txt_fill_card_info">Please fill card info:</string>
+    <string name="txt_choose_card_type">Please supply card info:</string>
+    <string name="txt_card_serial">Please fill serial number</string>
+    <string name="txt_card_pinnumber">Please fill card code</string>
+    <string name="txt_card_info">Regulations conversion</string>
+    <string name="paymentSuccessful">Payment successful</string>
+    <string name="captcha_charactor">Enter the correct characters in the image above</string>
+
+    <!-- bank payment -->
+    <string name="prompt_spinner_bank">[Choose type of bank...]</string>
+    <string name="txt_Method_Name_Bank">Payment via Bank</string>
+    <string name="txt_choose_bank_type">Choose type of bank</string>
+    <string name="invalid_bank_notification">You have not yet chosen type of bank, please check and try again!!</string>
+    <string name="txt_bank_info">Choose money pack:</string>
+    <string name="confirm_bank_payment">Click submit after finished payment on website</string>
+
+    <!-- paymnet via google -->
+    <string name="txt_Method_Name_Google">Payment via Google</string>
+    <string name="transaction_confirm">Transaction information</string>
+    
+    <string name="txt_Title_ForgotPass">Forgot Password</string>
+	<string name="txt_ExpandBtn_Mail">Reset password via Email</string>
+	<string name="txt_Expand_Decription_Mail">Enter your email address to reset your password. You may need to check your spam folder.</string>
+	<string name="txt_ExpandBtnText_Mail">Submit</string>
+	
+	<string name="txt_ExpandBtn_SMS">Reset password via SMS</string>
+	<string name="txt_Expand_Decription_SMS"><b>+ </b> Compose a message with syntax: <br><br><b>Ingame MK</b> [<b>USERNAME</b>] send to <b>8698</b></br></br><br><br><b>+ </b>Support only to mobile network operators : <b>Viettel, Vinaphone, Mobiphone, VietnamMobi.</b></br></br><br><br><b>+ </b>Cost 500 VNĐ/sms</br></br></string>
+	<string name="txt_ExpandBtnText_SMS">Send SMS</string>
+
+</resources>

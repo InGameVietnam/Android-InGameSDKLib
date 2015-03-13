@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:widget="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/ingame_bg_dialog" 
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ingame_bg_header"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/img_game_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ingame_game_icon" />
+
+        <LinearLayout
+            android:id="@+id/information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_game_icon"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <com.ingamesdk.widget.IGTextView
+                android:id="@+id/game_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/text_size_16"
+                 />
+
+            <TextView
+                android:id="@+id/payment_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/text_size_10"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- <include layout="@layout/line_layout" /> -->
+
+    <com.ingamesdk.widget.IGTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/caption_id"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black_text_color"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="15dp" >
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn_payment_card"
+            android:background="@drawable/ingame_button_card"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="40dp"
+                android:src="@drawable/ingame_choose_payment_method_card" />
+
+            <com.ingamesdk.widget.IGTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/paymentcard_textname"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_textview"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textColor="@color/link_text_light"
+                android:textSize="@dimen/text_size_10"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn_payment_bank"
+            android:background="@drawable/ingame_button_skype_blue"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="40dp"
+                android:src="@drawable/ingame_choose_payment_method_bank" />
+
+            <com.ingamesdk.widget.IGTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/paymentbank_textname"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_textview"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textColor="@color/link_text_light"
+                android:textSize="@dimen/text_size_10"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ingame_button_red"
+            android:id="@+id/btn_payment_google"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="40dp"
+                android:src="@drawable/ingame_choose_payment_method_google" />
+
+            <com.ingamesdk.widget.IGTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/paymentgoogle_textname"
+                android:layout_alignParentBottom="true"
+                android:background="@color/bg_textview"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textSize="@dimen/text_size_10"
+                android:textColor="@color/link_text_light"
+                 />
+        </RelativeLayout>
+    </LinearLayout>
+    
+	<include layout="@layout/ingame_comp_version" />
+	<include layout="@layout/ingame_comp_title" />
+</LinearLayout>
