@@ -197,7 +197,7 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 <b>Các tham số của hàm ingame_sdk.init(...)</b>
 
 ```
-　　public void init(Activity context, boolean isButton, boolean isAutoLogin, String callback_url, String app_id, String 	app_key) {...}
+　　public void init(Activity context, boolean isButton, boolean isAutoLogin, String callback_url) {...}
 ```
 
 >```context```:  Activity chính của ứng dụng<br/>
