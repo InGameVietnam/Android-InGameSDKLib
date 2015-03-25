@@ -197,7 +197,7 @@ The SDK includes 2 parts
 <b>The parameters of ingame_sdk.init(...)</b>
 
 ```
-　　public void init(Activity context, boolean isButton, boolean isAutoLogin, String callback_url, String app_id, String 	app_key) {...}
+　　public void init(Activity context, boolean isButton, boolean isAutoLogin, String callback_url) {...}
 ```
 
 >```context```:  The main Activity of your application<br/>
