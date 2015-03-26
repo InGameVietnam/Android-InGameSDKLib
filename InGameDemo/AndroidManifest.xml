@@ -61,8 +61,8 @@
              android:value="@integer/google_play_services_version" />
          <meta-data 
              android:name="com.IngameSDK.GoogleIAPKey" android:value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkympMgT0jnO4ocaPq7i4XBBdyIclgfzKNWnNNIZ3/B0pmOwx3QKzYIJuxo4G9S9kMK0F9k86PsnU9g8tbrVxW2hs85sfCI1etz6PScGM/IEX9afHzWYjUKDH//t6fIOu+n/B87E+BF9JgdhkWuvv+ztSlXfGGM2oRCcxXCfWlkA1Z1rTTojDEcBdHsK++7fxc4tTvF4OHTmCr3TlkTg7fUOyJHets5Wz8M36cuw4OPaW+uv+dxY/ZJHQSLaIb0TJVXljDYcLdFZgwoC+U+NSsOq/5FVvpqiJ4QfqDWdlsFI2ZF/sF7holI0Kb+PyiVOUUAwXU6F11h+/gPs/h/qYWQIDAQAB" />
-		    <meta-data android:name="com.IngameSDK.AppId" android:value="\ 911fe9dbd0f94625b4b591301c0f3818" />
-			<meta-data android:name="com.IngameSDK.AppKey" android:value="\ a2de0d67a7aecbcc89293fbed6712b1a" />
+		    <meta-data android:name="com.IngameSDK.AppId" android:value="\ 813c2380fa14c3d11394c9fe2d807f7f" />
+			<meta-data android:name="com.IngameSDK.AppKey" android:value="\ 499807cdbfa01b3b35a0a7def4ce7536" />
         <activity
             android:name="com.ingamesdk.ui.LoginActivity"
             android:theme="@style/UserDialog"
