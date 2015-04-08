@@ -96,7 +96,8 @@ public class MainActivity extends Activity {
 	}
 
 	public void makePayment(View v) {
-		m_InGameSDK.callPayment("ccccccc");
+		System.out.println("GameOrderID: "+System.currentTimeMillis());
+		m_InGameSDK.callPayment(System.currentTimeMillis() + "");
 	}
 
 	private class GameReceiver extends IGReceiver {
