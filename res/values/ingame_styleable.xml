@@ -2,6 +2,6 @@
 <resources>
 	<!-- declear for stylable -->
     <declare-styleable name="IGTextView">
-        <attr name="fontName1" format="string" />
+        <attr name="fontName" format="string" />
     </declare-styleable>
 </resources>
