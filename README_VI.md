@@ -190,7 +190,7 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 	private IntentFilter filter = new IntentFilter();
 	public static InGameSDK ingame_sdk = InGameSDK.getInstance(); // instance của InGameSDK
 　　
-<b>Thiết lập các giá trị cho InGameSDK bên trong hàm onCreate(...)</b>
+<b>Thiết lập các giá trị cho InGameSDK bên trong hàm onStart(...)</b>
 
 	ingame_sdk.init(this, true, true, callback_url);
 
