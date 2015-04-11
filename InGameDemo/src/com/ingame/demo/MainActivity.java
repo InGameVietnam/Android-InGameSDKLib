@@ -34,6 +34,10 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.main);
 		instance = this;
 
+	}
+
+	@Override
+	protected void onStart() {
 		m_InGameSDK = InGameSDK.getInstance();
 		m_InGameSDK.init(this, true, true, "http://ingame.wc.lt/callbacktest1.php");
 		tvInfo = (TextView) findViewById(R.id.tvInfo);
@@ -42,6 +46,7 @@ public class MainActivity extends Activity {
 		btnShowUser = (Button) findViewById(R.id.btnShowUser);
 		m_gameReceiver = new GameReceiver();
 		filter = new IntentFilter();
+		super.onStart();
 	}
 
 	@Override
@@ -96,7 +101,7 @@ public class MainActivity extends Activity {
 	}
 
 	public void makePayment(View v) {
-		System.out.println("GameOrderID: "+System.currentTimeMillis());
+		System.out.println("GameOrderID: " + System.currentTimeMillis());
 		m_InGameSDK.callPayment(System.currentTimeMillis() + "");
 	}
 
