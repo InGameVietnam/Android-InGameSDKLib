@@ -190,7 +190,7 @@ The SDK includes 2 parts
 	private IntentFilter filter = new IntentFilter();
 	public static InGameSDK ingame_sdk = InGameSDK.getInstance(); // instance of InGameSDK
 　　
-<b>Set the values to the function InGameSDK inside onStart(...)</b>
+<b>Set the values to the function InGameSDK inside onCreate(...)</b>
 
 	ingame_sdk.init(this, true, true, callback_url);
 
