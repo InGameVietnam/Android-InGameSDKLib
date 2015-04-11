@@ -33,11 +33,6 @@ public class MainActivity extends Activity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.main);
 		instance = this;
-
-	}
-
-	@Override
-	protected void onStart() {
 		m_InGameSDK = InGameSDK.getInstance();
 		m_InGameSDK.init(this, true, true, "http://ingame.wc.lt/callbacktest1.php");
 		tvInfo = (TextView) findViewById(R.id.tvInfo);
@@ -46,8 +41,9 @@ public class MainActivity extends Activity {
 		btnShowUser = (Button) findViewById(R.id.btnShowUser);
 		m_gameReceiver = new GameReceiver();
 		filter = new IntentFilter();
-		super.onStart();
+		super.onCreate(savedInstanceState);
 	}
+
 
 	@Override
 	protected void onResume() {
