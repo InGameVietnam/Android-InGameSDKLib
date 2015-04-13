@@ -144,19 +144,22 @@ The SDK includes 2 parts
 ```
 　　<application>
 　　　　...........................
- 		<activity
-　　　　　　android:name="com.ingamesdk.ui.LoginActivity"
-            	android:configChanges="orientation|keyboardHidden|screenSize"
-            	android:windowSoftInputMode="adjustPan" />
-        	<activity
-            	android:name="com.ingamesdk.ui.PaymentActivity"
-            	android:configChanges="orientation|keyboardHidden|screenSize"
-            	android:windowSoftInputMode="adjustPan" />
-        	<activity
-            	android:name="com.ingamesdk.ui.UserInfoActivity"
-            	android:configChanges="orientation|keyboardHidden|screenSize|locale"
-            	android:windowSoftInputMode="adjustPan" />
-        	<activity android:name="com.facebook.LoginActivity" />
+ 	<activity
+            android:name="com.ingamesdk.ui.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/UserDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ingamesdk.ui.PaymentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/UserDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.ingamesdk.ui.UserInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:theme="@style/UserDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.facebook.LoginActivity" />
 　　　　...........................
 　　</application>
 ```
