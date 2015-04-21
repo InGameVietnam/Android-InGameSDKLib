@@ -136,6 +136,21 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 　　　　    android:value="@string/App_Id" />
         <meta-data android:name="com.IngameSDK.AppKey" 
             android:value="@string/App_Key" />
+       
+         <!--  for app flyer -->
+        <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
+	<intent-filter>
+	<action android:name="com.android.vending.INSTALL_REFERRER" />
+	</intent-filter>
+	</receiver>
+	<receiver android:name="com.appsflyer.AppsFlyerLib" android:exported="true">
+	<intent-filter>
+	<action android:name="com.android.vending.INSTALL_REFERRER" />
+	</intent-filter>
+	</receiver>
+        <meta-data android:name="com.appflyer.dev_key" 
+             android:value="ekymUhihizGufaXWaeH5nn" />
+        <!--  end for app flyer -->
 　　　　...........................
 　　</application>
 ```
