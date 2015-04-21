@@ -1,5 +1,5 @@
 <?php
-$app_secret = '4563b0fde5eb26fccee6e6a6d5f6e784';
+$app_secret = '4563b0fde5eb26fccee6e6a6d5f6e784';//please change this with your app_secret
 
 $status = $_GET['status'];
 $app_id = $_GET['app_id'];
