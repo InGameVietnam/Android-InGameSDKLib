@@ -9,7 +9,7 @@
         android:id="@+id/comp_button_img"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="2dp"
         android:background="@android:color/transparent"
         android:src="@drawable/ingame_button" />
 
@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
+            android:background="@color/button_item"
             android:orientation="vertical" >
 
             <ImageView
@@ -34,6 +35,7 @@
                 android:layout_height="25dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
                 android:src="@drawable/ingame_menu_acc" />
 
             <TextView
@@ -54,6 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
+            android:background="@color/button_item"
             android:orientation="vertical" >
 
             <ImageView
@@ -62,6 +65,7 @@
                 android:layout_height="25dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
                 android:src="@drawable/ingame_menu_payment" />
 
             <TextView
@@ -83,6 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
+            android:background="@color/button_item"
             android:orientation="vertical" >
 
             <ImageView
@@ -91,6 +96,7 @@
                 android:layout_height="25dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
                 android:src="@drawable/ingame_menu_logout" />
 
             <TextView
