@@ -141,16 +141,17 @@ The SDK includes 2 parts
 	 <meta-data android:name="com.ingame.sandbox" android:value="true"/>
 	    
 	 <!--  for app flyer -->
-        <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
-	<intent-filter>
-	<action android:name="com.android.vending.INSTALL_REFERRER" />
-	</intent-filter>
-	</receiver>
-	<receiver android:name="com.appsflyer.AppsFlyerLib" android:exported="true">
-	<intent-filter>
-	<action android:name="com.android.vending.INSTALL_REFERRER" />
-	</intent-filter>
-	</receiver>
+        <receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.appsflyer.AppsFlyerLib">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
         <meta-data android:name="com.appflyer.dev_key" 
              android:value="ekymUhihizGufaXWaeH5nn" />
         <!--  end for app flyer -->
