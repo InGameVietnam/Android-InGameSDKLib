@@ -35,7 +35,7 @@
 	            android:textStyle="bold"/>
 	        <ListView 
 	            android:layout_width="match_parent"
-	            android:layout_height="150dp"
+	            android:layout_height="200dp"
 	            android:id="@+id/packages"
 	            android:paddingBottom="15dp"
 	            android:fadeScrollbars="false">
