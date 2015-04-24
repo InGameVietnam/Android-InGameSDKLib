@@ -64,7 +64,7 @@
     <string name="choose_username">Please select an account</string>
     <string name="DELETE_USER_QUESTION">Want to delete this account?</string>
     <string name="network_problem_title">Network Error</string>
-    <string name="LOGIN_SUCCESS">Logged in successfully!</string>
+    <string name="LOGIN_SUCCESS">Welcome @!</string>
     <string name="LOGOUT_SUCCESS">Logged out successfully!</string>
     <string name="UPDATED_INFO_SUCCESS">Updated successfully!</string>
     <string name="account_validate1">Only accept a-z, 0-9 characters for account name.</string>

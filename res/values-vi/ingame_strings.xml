@@ -67,7 +67,7 @@
     <string name="choose_username">Vui lòng chọn tài khoản</string>
     <string name="DELETE_USER_QUESTION">Bạn có thật sự muốn xóa tài khoản này?</string>
     <string name="network_problem_title">Lỗi mạng</string>
-    <string name="LOGIN_SUCCESS">Đăng nhập thành công!</string>
+    <string name="LOGIN_SUCCESS">Chào mừng @!</string>
     <string name="LOGOUT_SUCCESS">Đăng xuất thành công!</string>
     <string name="UPDATED_INFO_SUCCESS">Cập nhật thông tin thành công!</string>
     <string name="account_validate1">Tên tài khoản chỉ đồng ý các ký tự a-z, 0-9.</string>
