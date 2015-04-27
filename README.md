@@ -137,9 +137,6 @@ The SDK includes 2 parts
 	<meta-data android:name="com.IngameSDK.AppKey" 
 	    android:value="@string/App_Key" />
 	    
-	 <!-- if you want to enable/disable sandbox mode -->
-	 <meta-data android:name="com.ingame.sandbox" android:value="true"/>
-	    
 	 <!--  for app flyer -->
         <receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">
             <intent-filter>
