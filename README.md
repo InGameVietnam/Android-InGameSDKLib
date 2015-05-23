@@ -88,35 +88,10 @@ The SDK includes 2 parts
 　　<uses-permission android:name="android.permission.WAKE_LOCK" />
 　　<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 　　<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-　　
- 	<!-- Google Cloud Message Permission -->
-　　<permission
-　　　　android:name="<your_package_name>.permission.C2D_MESSAGE"
-　　　　android:protectionLevel="signature" />
-    	<uses-permission android:name="<your_package_name>.C2D_MESSAGE" />
-    	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
 　　<!-- Google IAP Permission -->
     	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 　　<uses-permission android:name="com.android.vending.BILLING" />
-```
-- Add ```<receiver>,<service> ``` tags inside ```<application>``` tag to receive message from <b>Google Cloud Messaging</b>:
-
-```
-　　<application
-　　　　...........................
-　　　　<receiver
-　　　　　　android:name="com.ingamesdk.pushnotification.GcmBroadcastReceiver"
-　　　　　　android:permission="com.google.android.c2dm.permission.SEND" >
-　　　　　　<intent-filter>
-　　　　　　　　<!-- Receives the actual messages. -->
-　　　　     		<action android:name="com.google.android.c2dm.intent.RECEIVE" />
-　　　　　　　　<category android:name="<your_package_name>" />
-　　　　　　</intent-filter>
-　　　　</receiver>
-　　　　<service android:name="com.ingamesdk.pushnotification.GcmIntentService" />
-　　　　...........................
-　　</application>
 ```
 - Add ```<meta-data>``` tags inside ```<application>``` tag to initial value for system
 
@@ -175,43 +150,57 @@ The SDK includes 2 parts
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
             android:theme="@style/UserDialog"
             android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.ingamesdk.ui.AdditionalServicesActivity"
+            android:theme="@style/UserDialog"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name="com.facebook.LoginActivity" />
 　　　　...........................
 　　</application>
 ```
 ###III. Declare variables, initiate and call SDK function from your application
-<b>Create ```Receiver.java``` to receive events from the SDK</b>
+<b>Create ```Interface``` to receive events from the SDK</b>
 
 ```
-　　private class GameReceiver extends IGReceiver {
+　	public class Listener implements IGListenerInterface{
+
+		@Override
+		public void LoginSuccessListener(JSONObject json) {
+                        //Through the session variable you can get account information by:
+                        //json.getString("userID");
+                        //json.getString("userName");
+                        //json.getString("accessToken");
+                        //json.getString("phone");
+                        //json.getString("email");
+		}
 		
-　　　　@Override
-		public void onLoginSuccess(IGSession session) {
+		@Override
+		public void LogOutSuccessListener() {
+			// TODO Auto-generated method stub
 		}
 
 		@Override
-		public void onLogoutSuccess() {
+		public void GetFriendListSuccessListener(JSONObject json) {
+		    // TODO Auto-generated method stub
+		}
+
+		@Override
+		public void InviteFriendSuccessListener() {
+			// TODO Auto-generated method stub
 		}
 	}
 ```
-
->Through the session variable you can get account information by calling the following functions:<br/>
-> ```session.getUserName()```: Username <br/>
-> ```session.getUserId()```: Account ID <br/>
-> ```session.getAccessToken()```: Access token <br/>
-> ```session.getEmail()```: Email <br/>
-> ```session.getPhone()```: Phone number <br/>
-
 　　
 <b>Declare the following variables inside the main Activity class of applications:</b>
 
-	private GameReceiver game_receiver = new GameReceiver();
-	private IntentFilter filter = new IntentFilter();
-	public static InGameSDK ingame_sdk = InGameSDK.getInstance(); // instance of InGameSDK
-　　
-<b>Set the values to the function InGameSDK inside onCreate(...)</b>
 
-	ingame_sdk.init(this, true, true, callback_url);
+	public static InGameSDK ingame_sdk = InGameSDK.getInstance(); // instance of InGameSDK
+    
+Set the values to the function InGameSDK inside onCreate(...)
+
+    Listener listener = new Listener();// init your listener
+    ingame_sdk.init(this, true, true, callback_url);
+    m_InGameSDK.setListener(listener);//set your listener to sdk
 
 <b>The parameters of ingame_sdk.init(...)</b>
 
@@ -229,33 +218,32 @@ The SDK includes 2 parts
 　　@Override
 	protected void onResume() {
 		super.onResume();
-		filter.addAction(this.getPackageName() + "ingame.login.success");
-		filter.addAction(this.getPackageName() + "ingame.logout.success");
-		registerReceiver(game_receiver, filter);
-		ingame_sdk.addSDKButton(this);
-		ingame_sdk.setContext(this);
+		InGameSDK.getInstance().onResume(this);
 	}
 	
 	@Override
 	protected void onPause() {
 		super.onPause();
-		ingame_sdk.removeSDKButton(this);
+	     InGameSDK.getInstance().onPause();
 	}
 	
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		unregisterReceiver(game_receiver);
+    @Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    super.onActivityResult(requestCode, resultCode, data);
+		InGameSDK.getInstance().onActivityResult(requestCode, resultCode, data);
 	}
 ```
 
 <b>Call the function corresponding that the SDK provides functionality for each operation:</b>
 ```
-　　Registration: 			    ingame_sdk.callRegister();
-　　Log in:				        ingame_sdk.callLogin();
-　　Log out: 						ingame_sdk.callLogout();
+　　Registration: 		        ingame_sdk.callRegister();
+　　Log in:				ingame_sdk.callLogin();
+　　Log out: 				ingame_sdk.callLogout();
 　　User information: 			ingame_sdk.callshowUserInfo();
-　　Payment: 				    	ingame_sdk.callPayment(String game_order); // game_order: Transaction code is created by Developer (less than 50 characters).
+　　Payment: 				ingame_sdk.callPayment(String game_order); // game_order: Transaction code is created by Developer (less than 50 characters).
+　　Invite Friend (Show sdk UI)         ingame_sdk.callInviteFriend();// after sent request successfully you can receive a message from InviteFriendSuccessListener
+　　Get List FB friend:                 ingame_sdk.callGetFBFriendList(); //game will receive friend list in  GetFriendListSuccessListener(Json json)
+　　Share FB message:                   ingame_sdk.callShareMessageFromGame(YOUR_MESSAGE, null);
 ```
 
 
