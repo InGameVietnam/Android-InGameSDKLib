@@ -243,7 +243,7 @@ Set the values to the function InGameSDK inside onCreate(...)
 　　Payment: 				ingame_sdk.callPayment(String game_order); // game_order: Transaction code is created by Developer (less than 50 characters).
 　　Invite Friend (Show sdk UI)         ingame_sdk.callInviteFriend();// after sent request successfully you can receive a message from InviteFriendSuccessListener
 　　Get List FB friend:                 ingame_sdk.callGetFBFriendList(); //game will receive friend list in  GetFriendListSuccessListener(Json json)
-　　Share FB message:                   ingame_sdk.callShareMessageFromGame(YOUR_MESSAGE, null);
+　　Share FB message:                   ingame_sdk.callShareMessageFromGame(YOUR_MESSAGE, YOUR_LIST_FRIEND_ID);
 ```
 
 
