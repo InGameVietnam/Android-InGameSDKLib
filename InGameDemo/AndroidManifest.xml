@@ -5,7 +5,7 @@
     android:versionName="4.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <uses-permission android:name="android.permission.SEND_SMS" />
@@ -15,14 +15,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-    <permission
-        android:name="com.ingame.demo.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
-
-    <uses-permission android:name="com.ingame.demo.permission.C2D_MESSAGE" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -36,7 +29,8 @@
         <activity
             android:name="com.ingame.demo.MainActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/AppBaseTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,36 +38,24 @@
             </intent-filter>
         </activity>
 
-        <receiver
-            android:name="com.ingamesdk.pushnotification.GcmBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-            <intent-filter>
-
-                <!-- Receives the actual messages. -->
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-
-                <category android:name="com.ingame.demo" />
-            </intent-filter>
-        </receiver>
-
-        <service android:name="com.ingamesdk.pushnotification.GcmIntentService" />
-
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_appId" />
+            android:value="\ 1579816265626356" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.IngameSDK.GoogleIAPKey"
-            android:value="@string/googleplay_appId" />
+            android:value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkympMgT0jnO4ocaPq7i4XBBdyIclgfzKNWnNNIZ3/B0pmOwx3QKzYIJuxo4G9S9kMK0F9k86PsnU9g8tbrVxW2hs85sfCI1etz6PScGM/IEX9afHzWYjUKDH//t6fIOu+n/B87E+BF9JgdhkWuvv+ztSlXfGGM2oRCcxXCfWlkA1Z1rTTojDEcBdHsK++7fxc4tTvF4OHTmCr3TlkTg7fUOyJHets5Wz8M36cuw4OPaW+uv+dxY/ZJHQSLaIb0TJVXljDYcLdFZgwoC+U+NSsOq/5FVvpqiJ4QfqDWdlsFI2ZF/sF7holI0Kb+PyiVOUUAwXU6F11h+/gPs/h/qYWQIDAQAB" />
         <meta-data
             android:name="com.IngameSDK.AppId"
-            android:value="\ ebfb4b7bcbdbb1cd6fe9737e01362b7c" />
+            android:value="\ 4150ee1fedfb016340a5d7f0a5bbf082" />
         <meta-data
             android:name="com.IngameSDK.AppKey"
-            android:value="\ c5b217196d6d1ad04f0cde74b4b883d9" />
+            android:value="\ c55cc6a3b13c8f02dcf11f5c516a941c" />
+        <meta-data
+            android:name="com.ingame.sandbox"
+            android:value="false" />
 
         <activity
             android:name="com.ingamesdk.ui.LoginActivity"
@@ -91,6 +73,31 @@
             android:theme="@style/UserDialog"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name="com.facebook.LoginActivity" />
+        <activity
+            android:name="com.ingamesdk.ui.AdditionalServicesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:theme="@style/UserDialog"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- for app flyer -->
+        <receiver
+            android:name="com.appsflyer.MultipleInstallBroadcastReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.appsflyer.AppsFlyerLib"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.PACKAGE_REMOVED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.appflyer.dev_key"
+            android:value="ekymUhihizGufaXWaeH5nn" />
     </application>
 
 </manifest>

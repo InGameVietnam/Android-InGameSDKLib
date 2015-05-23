@@ -66,7 +66,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="2dp"
                 android:layout_marginTop="2dp"
-                android:src="@drawable/ingame_menu_payment" />
+                android:src="@drawable/ingame_menu_game" />
 
             <TextView
                 android:id="@+id/comp_button_tvItem2"
@@ -79,8 +79,9 @@
                 android:textColor="#ffffffff"
                 android:textSize="8sp"
                 android:textStyle="bold" />
-        </LinearLayout>
 
+        </LinearLayout>
+        
         <LinearLayout
             android:id="@+id/comp_button_item3"
             android:layout_width="wrap_content"
@@ -97,10 +98,42 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="2dp"
                 android:layout_marginTop="2dp"
-                android:src="@drawable/ingame_menu_logout" />
+                android:src="@drawable/ingame_menu_social" />
 
             <TextView
                 android:id="@+id/comp_button_tvItem3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff474747"
+                android:minWidth="40dp"
+                android:padding="3dp"
+               	android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textColor="#ffffffff"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comp_button_item4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@color/button_item"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/ingame_menu_logout" />
+
+            <TextView
+                android:id="@+id/comp_button_tvItem4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#ff474747"

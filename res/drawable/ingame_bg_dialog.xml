@@ -1,9 +1,3 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <solid
-        android:angle="270.0"
-        android:color="#EBEFF2" />
-
-    <!-- <corners android:radius="5dp" />-->
-
+    <solid android:color="#e2e5e8" />
 </shape>

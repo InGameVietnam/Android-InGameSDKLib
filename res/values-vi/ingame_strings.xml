@@ -67,7 +67,7 @@
     <string name="choose_username">Vui lòng chọn tài khoản</string>
     <string name="DELETE_USER_QUESTION">Bạn có thật sự muốn xóa tài khoản này?</string>
     <string name="network_problem_title">Lỗi mạng</string>
-    <string name="LOGIN_SUCCESS">Chào mừng @!</string>
+    <string name="LOGIN_SUCCESS">Chào mừng @</string>
     <string name="LOGOUT_SUCCESS">Đăng xuất thành công!</string>
     <string name="UPDATED_INFO_SUCCESS">Cập nhật thông tin thành công!</string>
     <string name="account_validate1">Tên tài khoản chỉ đồng ý các ký tự a-z, 0-9.</string>
@@ -125,4 +125,13 @@
 	<string name="txt_ExpandBtn_SMS">Lấy lại mật khẩu thông qua SMS</string>
 	<string name="txt_Expand_Decription_SMS">Soạn Tin nhắn với cú pháp: <br><br><b>Ingame MK</b> [<b>Tên_Tài_Khoản</b>] gửi đến <b>8698</b></br></br><br><br>Chỉ hỗ trợ cho những nhà mạng: <b>Viettel, Vinaphone, Mobiphone, VietnamMobi.</b></br></br><br><br><b>+ </b>Phí 500 VNĐ/sms</br></br></string>
 	<string name="txt_ExpandBtnText_SMS">Gửi SMS</string>
+		<!-- friend list -->
+	<string name="txt_friendlist">Danh sách bạn bè </string>
+	<string name="title_pickfriend">Vui lòng chọn người bạn muốn chia sẻ</string>
+	<string name="msg_post_completed">Đã gửi thành công!</string>
+	<string name="post_message">Hãy đến và chơi game cùng tôi nào!</string>
+	
+	<!-- More game -->
+	<string name="caption_moregame">Những trò chơi khác</string>
+	<string name="downloaded_players_text">người chơi</string>
 </resources>

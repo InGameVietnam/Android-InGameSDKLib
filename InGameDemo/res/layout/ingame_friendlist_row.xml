@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ingame_payment_item_background"
+    android:layout_gravity="center_vertical|center_horizontal">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" 
+        android:src="@drawable/ingame_img_profile"/>
+ 
+    <TextView
+        android:id="@+id/id_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_centerInParent="true"
+        android:textColor="#0a2b00"
+        android:textSize="@dimen/text_size_16" />
+    <CheckBox 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkbox"
+        android:visibility="visible"
+        android:clickable="false"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

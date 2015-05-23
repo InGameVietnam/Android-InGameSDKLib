@@ -22,8 +22,7 @@
                 android:id="@+id/img_game_icon"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:paddingLeft="5dp"
-                android:src="@drawable/ingame_game_icon" />
+                android:paddingLeft="5dp" />
 
             <LinearLayout
                 android:id="@+id/information"

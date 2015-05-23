@@ -1,5 +1,4 @@
 <resources>
-
     <string name="version">Version 1.0</string>
     <string name="login">Login</string>
     <string name="yes">OK</string>
@@ -64,7 +63,7 @@
     <string name="choose_username">Please select an account</string>
     <string name="DELETE_USER_QUESTION">Want to delete this account?</string>
     <string name="network_problem_title">Network Error</string>
-    <string name="LOGIN_SUCCESS">Welcome @!</string>
+    <string name="LOGIN_SUCCESS">Welcome @</string>
     <string name="LOGOUT_SUCCESS">Logged out successfully!</string>
     <string name="UPDATED_INFO_SUCCESS">Updated successfully!</string>
     <string name="account_validate1">Only accept a-z, 0-9 characters for account name.</string>
@@ -124,5 +123,14 @@
 	<string name="txt_ExpandBtn_SMS">Reset password via SMS</string>
 	<string name="txt_Expand_Decription_SMS"><b>+ </b> Compose a message with syntax: <br><br><b>Ingame MK</b> [<b>USERNAME</b>] send to <b>8698</b></br></br><br><br><b>+ </b>Support only to mobile network operators : <b>Viettel, Vinaphone, Mobiphone, VietnamMobi.</b></br></br><br><br><b>+ </b>Cost 500 VNĐ/sms</br></br></string>
 	<string name="txt_ExpandBtnText_SMS">Send SMS</string>
-
+	
+	<!-- friend list -->
+	<string name="txt_friendlist">Friend Lists</string>
+	<string name="title_pickfriend">Please pick who you want to send</string>
+	<string name="msg_post_completed">Sent successfully!</string>
+	<string name="post_message">Come and play game with me!</string>
+	
+	<!-- More game -->
+	<string name="caption_moregame">More Games</string>
+	<string name="downloaded_players_text">players</string>
 </resources>

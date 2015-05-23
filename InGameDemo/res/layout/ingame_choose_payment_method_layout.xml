@@ -17,8 +17,7 @@
         <ImageView
             android:id="@+id/img_game_icon"
             android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ingame_game_icon" />
+            android:layout_height="50dp"/>
 
         <LinearLayout
             android:id="@+id/information"

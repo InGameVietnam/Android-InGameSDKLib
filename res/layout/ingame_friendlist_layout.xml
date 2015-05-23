@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ingame_bg_dialog"
+    android:orientation="vertical" >
+    <include layout="@layout/ingame_comp_title" />
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp"
+	    android:orientation="vertical" >
+	 <FrameLayout android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:layout_marginTop="10dp"
+	     android:layout_marginBottom="5dp"
+	     android:gravity="center_horizontal"
+	     android:orientation="horizontal">
+     <TextView 
+	    android:layout_width="220dp"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/edit_namelist"
+	    android:textSize="@dimen/text_size_10"
+	    android:textColor="@color/black"
+	    android:singleLine="false"
+	    android:maxLines="2"
+	    android:scrollbars="vertical"
+	    android:fadeScrollbars="false"
+	    android:textStyle="bold"
+	    android:layout_gravity="start|center_vertical"
+	    android:layout_marginRight="10dp"
+	    android:background="@drawable/ingame_rounded_edittext"/>
+      <ImageView 
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:id="@+id/btn_share"
+        android:src="@drawable/ingame_btn_send"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|center_vertical"/>
+     </FrameLayout>
+	 <SearchView
+        android:id="@+id/searchView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:showDividers="beginning"
+        android:layout_marginBottom="5dp">
+	 </SearchView>
+	  
+     <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+</LinearLayout>
