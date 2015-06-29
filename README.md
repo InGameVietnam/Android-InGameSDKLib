@@ -196,11 +196,11 @@ The SDK includes 2 parts
 
 	public static InGameSDK ingame_sdk = InGameSDK.getInstance(); // instance of InGameSDK
     
-Set the values to the function InGameSDK inside onCreate(...)
-    ingame_sdk.callSendInstallationEvent(this); //this function must be called before init sdk.
-    Listener listener = new Listener();// init your listener
-    ingame_sdk.init(this, true, true, callback_url);
-    m_InGameSDK.setListener(listener);//set your listener to sdk
+<b>Set the values to the function InGameSDK inside onCreate(...)</b>
+    <br>ingame_sdk.callSendInstallationEvent(this); ```//this function must be called before init sdk.```<br/>
+    <br>Listener listener = new Listener();```// init your listener```<br/>
+    <br>ingame_sdk.init(this, true, true, callback_url);<br/>
+    <br>ingame_sdk.setListener(listener);```//set your listener to sdk```<br/>
 
 <b>The parameters of ingame_sdk.init(...)</b>
 
