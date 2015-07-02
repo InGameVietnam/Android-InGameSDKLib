@@ -1,4 +1,4 @@
-Ngôn ngữ khác: [English](README.md)
+Ngôn ngữ khác: [English](README.md) | [Chinese] (README_CN.md)
 ##TÀI LIỆU HƯỚNG DẪN TÍCH HỢP HỆ THỐNG INGAMESDK
 
 **Giới thiệu**
