@@ -2,57 +2,76 @@
  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ingame_bg_dialog"
+    android:background="@android:color/white"
+    android:padding="20dp"
     android:orientation="vertical" >
-    <include layout="@layout/ingame_comp_title" />
+	<LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:gravity="left|center_vertical"
+         android:background="@drawable/ingame_rounded_searchview"
+         android:orientation="horizontal" >
+         <com.ingamesdk.widget.IGEditText
+             android:id="@+id/searchView1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="5dp"
+             android:layout_weight="1"
+             android:background="@android:color/transparent"
+             android:ems="15"
+             android:inputType="textNoSuggestions"
+             android:maxLength="16"
+             android:textSize="@dimen/text_size_15" />
+         <ImageView
+             android:id="@+id/search_btn"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:layout_marginRight="3dp"
+             android:src="@drawable/ingame_icon_search"/>
+    </LinearLayout>
     <LinearLayout 
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:layout_marginLeft="15dp"
-	    android:layout_marginRight="15dp"
+	    android:layout_marginTop="7dp"
+	    android:layout_marginBottom="7dp"
 	    android:orientation="vertical" >
-	 <FrameLayout android:layout_width="match_parent"
-	     android:layout_height="wrap_content"
-	     android:layout_marginTop="10dp"
-	     android:layout_marginBottom="5dp"
-	     android:gravity="center_horizontal"
-	     android:orientation="horizontal">
-     <TextView 
-	    android:layout_width="220dp"
-	    android:layout_height="wrap_content"
-	    android:id="@+id/edit_namelist"
-	    android:textSize="@dimen/text_size_10"
-	    android:textColor="@color/black"
-	    android:singleLine="false"
-	    android:maxLines="2"
-	    android:scrollbars="vertical"
-	    android:fadeScrollbars="false"
-	    android:textStyle="bold"
-	    android:layout_gravity="start|center_vertical"
-	    android:layout_marginRight="10dp"
-	    android:background="@drawable/ingame_rounded_edittext"/>
-      <ImageView 
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:id="@+id/btn_share"
-        android:src="@drawable/ingame_btn_send"
-        android:layout_alignParentRight="true"
-        android:layout_gravity="end|center_vertical"/>
-     </FrameLayout>
-	 <SearchView
-        android:id="@+id/searchView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:showDividers="beginning"
-        android:layout_marginBottom="5dp">
-	 </SearchView>
-	  
+     <FrameLayout
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="@drawable/ingame_edittext_selector"
+         android:layout_marginTop="5dp"
+         android:layout_marginBottom="5dp">
+          <TextView 
+		    android:layout_width="230dp"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/edit_namelist"
+		    android:textSize="@dimen/text_size_12"
+		    android:textColor="@color/com_ingamesdk_color_mainColor"
+		    android:singleLine="false"
+		    android:maxLines="5"
+		    android:scrollbars="vertical"
+		    android:fadeScrollbars="false"
+		    android:textStyle="bold"
+		    android:gravity="bottom"
+		    android:padding="5dp"
+		    android:layout_gravity="start|center_vertical"
+		    android:layout_marginRight="10dp"/>
+         <Button
+             android:id="@+id/btn_share"
+             android:layout_width="65dp"
+             android:layout_height="40dp"
+             android:padding="3dp"
+             android:layout_gravity="end|center_vertical"
+             android:textColor="@drawable/ingame_button_text_selector"
+             android:textSize="@dimen/text_size_12"
+             android:gravity="center_vertical|center_horizontal"
+             android:background="@drawable/ingame_button_selector"/>
+    </FrameLayout>
      <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="20dp"/>
     </LinearLayout>
 </LinearLayout>

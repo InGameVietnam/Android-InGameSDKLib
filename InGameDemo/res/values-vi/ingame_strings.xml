@@ -1,14 +1,14 @@
 <resources>
 
-    <string name="version">Version 1.0</string>
+    <string name="sdkversion">Phiên bản 2.0</string>
     <string name="login">Đăng nhập</string>
     <string name="yes">Chấp nhận</string>
-    <string name="no">Thôi</string>
+    <string name="no">Hủy</string>
     <string name="ACCOUNT">ACCOUNT</string>
     <string name="LOG_OUT">LOG OUT</string>
     <string name="submit">Xác nhận</string>
     <string name="refresh">Tải lại</string>
-    <string name="login_title">Điền tên tài khoản và mật khẩu</string>
+    <string name="login_title">Đăng nhập vào tài khoản</string>
     <string name="fill_info">Điền thông tin của bạn</string>
     <string name="login_username">Tài khoản</string>
     <string name="login_password">Mật khẩu</string>
@@ -40,14 +40,16 @@
     <string name="txt_login_facebook">Facebook</string>
     <string name="txt_login_google">Google</string>
     <string name="txt_login_ingame">Ingame</string>
-    <string name="txt_login_quick">Đ.Nhập nhanh</string>
+    <string name="txt_login_quick">Đăng nhập nhanh</string>
     <string name="txt_payment_card">Thẻ cào</string>
     <string name="txt_payment_bank">E-Banking</string>
     <string name="txt_payment_google">Google</string>
-    <string name="TXT_TAB_USERINFOR">Thông tin tài khoản</string>
-    <string name="TXT_TAB_TRANSACTION">Lịch sử thanh toán</string>
+    <string name="TXT_TAB_USERINFOR">Tài khoản</string>
+    <string name="TXT_TAB_TRANSACTION">Thanh toán</string>
     <string name="TXT_LOGING_IN">Đang đăng nhập.....</string>
     <!-- show user infor -->
+    <string name="tab_user_title">Tài khoản</string>
+    <string name="tab_trans_title">Giao dịch</string>
     <string name="txt_suggest_update_info">[Cảnh báo] Bạn nên thay đổi thông tin tài khoản cho lần đăng nhập sau này</string>
     <string name="userinfo_user_name">Tài khoản</string>
     <string name="userinfo_update_password">Bạn có muốn thay đổi mật khẩu ?</string>
@@ -101,7 +103,8 @@
     <string name="txt_choose_card_type">Vui lòng cung cấp thông tin thẻ cào:</string>
     <string name="txt_card_serial">Vui lòng nhập số serial</string>
     <string name="txt_card_pinnumber">Vui lòng nhập mã thẻ</string>
-    <string name="txt_card_info">Quy định chuyển đổi</string>
+    <string name="txt_card_info">Danh sách quy định chuyển đổi</string>
+    <string name="txt_regulations_title">Quy định chuyển đổi</string>
     <string name="paymentSuccessful">Thanh toán thành công</string>
     <string name="captcha_charactor">Nhập đúng các ký tự trong hình trên</string>
 
@@ -118,20 +121,30 @@
     <string name="transaction_confirm">Thông tin giao dịch </string>
 
     <string name="txt_Title_ForgotPass">Quên Mật Khẩu</string>
-	<string name="txt_ExpandBtn_Mail">Lấy lại mật khẩu thông qua Email</string>
-	<string name="txt_Expand_Decription_Mail">Nhập email của bạn để cấp lại mật khẩu. Bạn có thể phải check trong thư mục spam.</string>
+	<string name="txt_ExpandBtn_Mail">Thông qua Email</string>
+	<string name="txt_Expand_Decription_Mail">* Nhập email của bạn để cấp lại mật khẩu. <br>Bạn có thể phải check trong thư mục spam.</br></string>
 	<string name="txt_ExpandBtnText_Mail">Gửi</string>
 	
-	<string name="txt_ExpandBtn_SMS">Lấy lại mật khẩu thông qua SMS</string>
-	<string name="txt_Expand_Decription_SMS">Soạn Tin nhắn với cú pháp: <br><br><b>Ingame MK</b> [<b>Tên_Tài_Khoản</b>] gửi đến <b>8698</b></br></br><br><br>Chỉ hỗ trợ cho những nhà mạng: <b>Viettel, Vinaphone, Mobiphone, VietnamMobi.</b></br></br><br><br><b>+ </b>Phí 500 VNĐ/sms</br></br></string>
+	<string name="txt_ExpandBtn_SMS">Thông qua SMS</string>
+	<string name="txt_Expand_Decription_SMS">* Soạn Tin nhắn với cú pháp: <br><b>Ingame MK</b> [<b>Tên_Tài_Khoản</b>] gửi đến <b>8698</b></br><br>* Chỉ hỗ trợ cho những nhà mạng:</br><br><b>Viettel, Vinaphone, Mobiphone, VietnamMobi.</b></br><br>* Phí 500 VND/sms</br></string>
 	<string name="txt_ExpandBtnText_SMS">Gửi SMS</string>
 		<!-- friend list -->
 	<string name="txt_friendlist">Danh sách bạn bè </string>
 	<string name="title_pickfriend">Vui lòng chọn người bạn muốn chia sẻ</string>
 	<string name="msg_post_completed">Đã gửi thành công!</string>
 	<string name="post_message">Hãy đến và chơi game cùng tôi nào!</string>
+	<string name="txt_btn_send">Gửi</string>
 	
 	<!-- More game -->
 	<string name="caption_moregame">Những trò chơi khác</string>
 	<string name="downloaded_players_text">người chơi</string>
+	
+	<!--  footer zone -->
+	<string name="txt_userinfo_title">Tài Khoản</string>
+	<string name="txt_moregame_title">Chơi Game</string>
+	<string name="txt_share_title">Chia Sẻ</string>
+	<string name="txt_exit_title">Đăng Xuất</string>
+	
+	<!-- AlertDialog -->
+	<string name="txt_AlertDialog_Title">Thông Báo</string>
 </resources>

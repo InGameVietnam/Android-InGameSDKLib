@@ -8,7 +8,6 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -36,9 +35,10 @@ public class MainActivity extends Activity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.main);
 		instance = this;
-		
+
 		Listener listener = new Listener();
 		m_InGameSDK = InGameSDK.getInstance();
+		m_InGameSDK.callSendInstallationEvent(this);
 		m_InGameSDK.setListener(listener);
 		m_InGameSDK.init(this, true, true, "");
 		m_InGameSDK.setgameOrderId(random());
@@ -46,21 +46,21 @@ public class MainActivity extends Activity {
 		btnLogin = (Button) findViewById(R.id.btnLogin);
 		btnPayment = (Button) findViewById(R.id.btnPayment);
 		btnShowUser = (Button) findViewById(R.id.btnShowUser);
-		
+
 		if (!isloggedin)
 			InGameSDK.getInstance().callLogin();
 	}
-	
+
 	public static String random() {
-	    Random generator = new Random();
-	    StringBuilder randomStringBuilder = new StringBuilder();
-	    int randomLength = generator.nextInt(15);
-	    char tempChar;
-	    for (int i = 0; i < randomLength; i++){
-	        tempChar = (char) (generator.nextInt(96) + 32);
-	        randomStringBuilder.append(tempChar);
-	    }
-	    return randomStringBuilder.toString();
+		Random generator = new Random();
+		StringBuilder randomStringBuilder = new StringBuilder();
+		int randomLength = generator.nextInt(15);
+		char tempChar;
+		for (int i = 0; i < randomLength; i++) {
+			tempChar = (char) (generator.nextInt(96) + 32);
+			randomStringBuilder.append(tempChar);
+		}
+		return randomStringBuilder.toString();
 	}
 
 	@Override
@@ -74,7 +74,6 @@ public class MainActivity extends Activity {
 		super.onPause();
 		InGameSDK.getInstance().onPause();
 	}
-	
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -82,26 +81,26 @@ public class MainActivity extends Activity {
 		super.onActivityResult(requestCode, resultCode, data);
 		InGameSDK.getInstance().onActivityResult(requestCode, resultCode, data);
 	}
-	
+
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
 	}
-	
+
 	@Override
-	  public boolean onKeyDown(int keyCode, KeyEvent event) {
-	    if (keyCode == KeyEvent.KEYCODE_BACK) {
-	      moveTaskToBack(true);
-	    }
-	    return super.onKeyDown(keyCode, event);
-	  }
-	        
-	  // Alternative variant for API 5 and higher
-	  @Override
-	  public void onBackPressed() {
-	    moveTaskToBack(true);
-	  }
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			moveTaskToBack(true);
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
+	// Alternative variant for API 5 and higher
+	@Override
+	public void onBackPressed() {
+		moveTaskToBack(true);
+	}
 
 	public void login(View v) {
 		if (!isloggedin)
@@ -121,28 +120,26 @@ public class MainActivity extends Activity {
 	public void makePayment(View v) {
 		m_InGameSDK.callPayment(random());
 	}
-	
-	public void Invite(View v)
-	{
+
+	public void Invite(View v) {
 		m_InGameSDK.callInviteFriend();
 	}
-	
-	public void GetFriend(View v)
-	{
+
+	public void GetFriend(View v) {
 		m_InGameSDK.callGetFBFriendList();
 	}
-	
-	public void Share(View v)
-	{
+
+	public void Share(View v) {
 		m_InGameSDK.callShareMessageFromGame("Test", null);
 	}
-	
-	public void MoreGame(View v)
-	{
-		m_InGameSDK.callShowMoreGame();
+
+	public void LogOut(View v) {
+
+		m_InGameSDK.callLogout();
 	}
-	
-	public class Listener implements IGListenerInterface{
+
+
+	public class Listener implements IGListenerInterface {
 
 		@Override
 		public void LoginSuccessListener(JSONObject json) {
@@ -153,12 +150,7 @@ public class MainActivity extends Activity {
 				String accesstoken = json.getString("accessToken");
 				String phone = json.getString("phone");
 				String email = json.getString("email");
-				System.out.println("XXXXXX id = " + id + " name = " + name + " accesstoken = " + accesstoken + " email = " +
-						email + " phone = " + phone);
-				
-				
 				tvInfo.setText("Hello " + name);
-				Log.i("IngameDemo", "XXXXXXXX" + accesstoken + ";" + id);
 				tvInfo.setVisibility(View.VISIBLE);
 				btnLogin.setText("Logout");
 				btnPayment.setVisibility(View.VISIBLE);
@@ -168,9 +160,9 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+
 		}
-		
+
 		@Override
 		public void LogOutSuccessListener() {
 			// TODO Auto-generated method stub

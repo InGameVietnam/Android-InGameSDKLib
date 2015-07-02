@@ -2,5 +2,4 @@
 <resources>
 	<!-- integer -->
 	<integer name="google_play_services_version">4323000</integer>
-	<string name="ingamesdk_version">Version 1.1</string>
 </resources>

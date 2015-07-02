@@ -1,67 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:widget="http://schemas.android.com/apk/res-auto"
-    android:layout_width="320dp"
-    android:layout_height="wrap_content"
-    android:background="@drawable/ingame_bg_dialog" >
-	
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="10dp" 
+    android:scrollbars="none">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/ingame_bg_header"
-        android:orientation="vertical" >      
- 		<include layout="@layout/ingame_comp_title" />
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        android:orientation="vertical" >   
+        <LinearLayout 
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/ingame_bg_header"
-            android:paddingBottom="10dp" 
-            android:visibility="gone">
-
-            <ImageView
-                android:id="@+id/img_game_icon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:paddingLeft="5dp" />
-
-            <LinearLayout
-                android:id="@+id/information"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <LinearLayout 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/img_game_icon"
-                android:gravity="left"
+                android:id="@+id/btn_tab_UserInfo"
                 android:orientation="vertical"
-                android:padding="5dp" >
-
-                <com.ingamesdk.widget.IGTextView
-                    android:id="@+id/game_name"
+                android:background="@drawable/ingame_button_tab"
+                android:clickable="true"
+                android:gravity="center_horizontal|center_vertical">
+                <TextView 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black_text_color"
-                    android:textSize="@dimen/text_size_16"
-                     />
-
-                <com.ingamesdk.widget.IGTextView
-                    android:id="@+id/payment_username"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#ffffff"
-                    android:padding="3dp"
-                    android:textColor="@color/black_text_color"
-                    android:textSize="@dimen/text_size_10"
-                    android:textStyle="bold"
-                     />
+                    android:id="@+id/info_tab_user_title"
+                    android:padding="5dip"
+                    android:textColor="@drawable/ingame_tab_text_selector"/>
             </LinearLayout>
-
-            <LinearLayout
+            <LinearLayout 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/img_game_icon"
-                android:layout_alignParentRight="true"
-                android:orientation="horizontal"
-                android:paddingTop="5dp" >
-            </LinearLayout>
-        </RelativeLayout>
-        <include layout="@layout/ingame_user_information" />
+                android:id="@+id/btn_tab_Transaction"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:background="@drawable/ingame_button_tab_right"
+                android:gravity="center_horizontal|center_vertical">
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/info_tab_trans_title"
+                    android:padding="5dip"
+                    android:textColor="@drawable/ingame_tab_text_selector"/>
+           </LinearLayout>
+       </LinearLayout>   
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/UserlayoutContainer"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical" >
+	       <include layout="@layout/ingame_user_infor_tab_layout" />
+	       <include layout="@layout/ingame_transaction_infos_tab_layout" />
+       </LinearLayout>
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

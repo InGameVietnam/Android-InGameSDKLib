@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ingame_rounded_layout"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:padding="20dp"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/txt_title_alertDialog"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@drawable/ingame_edittext_bg"
+        android:text="Thông Báo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/com_ingamesdk_color_mainColor"/>
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/txt_alertDialog"
+        android:textSize="@dimen/text_size_16"/>
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal">
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_alertDialog2"
+            android:background="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="start|center_vertical"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold"
+            android:textColor="@drawable/ingame_text_selector"/>
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_alertDialog1"
+            android:layout_gravity="end|center_vertical"
+            android:background="@android:color/white"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold"
+            android:textColor="@drawable/ingame_text_selector"/>
+    </FrameLayout>
+</LinearLayout>

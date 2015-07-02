@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:widget="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="327dp"
+    android:layout_height="match_parent"
+    android:id="@+id/Transactioninfo_container" 
     android:orientation="vertical"
+    android:visibility="gone"
     tools:context=".DeviceFragment" >
 
     <ProgressBar
@@ -20,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
+        android:textColor="@color/com_ingamesdk_color_mainColor"
         android:layout_marginTop="65dp"
         android:textSize="@dimen/text_size_14"
          />

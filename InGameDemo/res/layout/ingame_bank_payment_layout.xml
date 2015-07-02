@@ -5,10 +5,25 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:layout_gravity="center_horizontal"
-	android:background="@drawable/ingame_bg_dialog" 
+	android:background="@android:color/white"
+	android:padding="20dp"
 	android:orientation="vertical">
-
-     <include layout="@layout/ingame_comp_title" />
+	<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_tab_Mail"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ingame_rounded_title_shape"
+        android:clickable="false"
+        android:gravity="center_horizontal|center_vertical">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:id="@+id/caption_id"
+            android:textSize="@dimen/text_size_18"
+            android:textColor="@color/com_ingamesdk_color_mainColor"/>
+     </LinearLayout>
      <ListView 
          android:layout_width="match_parent"
          android:layout_height="match_parent"

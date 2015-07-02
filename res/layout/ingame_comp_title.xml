@@ -1,56 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:widget="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/ingame_bg_header"
-    android:orientation="horizontal"
-    android:padding="10dp" >
+    android:id="@+id/header"
+    android:background="@color/com_ingamesdk_color_mainColor"
+    android:orientation="vertical" >
 
-  
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:id="@+id/logo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/ingame_logo" />
-	
-     <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/text_Title"
-            android:layout_centerInParent="true"
-            android:layout_alignParentTop="true"
-            android:inputType="textNoSuggestions"
-            android:textColor="@color/black_text_color"
-            android:paddingTop="30dp"
-            android:textSize="@dimen/text_size_18"
-            android:textStyle="bold"
-            android:layout_gravity="center"           
-            android:visibility="gone"/>
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true" >
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingTop="5dp" 
+         android:paddingBottom="2dp" >
 
         <ImageView
-            android:id="@+id/img_lang_en"
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:src="@drawable/ingame_lang_en" />
+            android:id="@+id/header_btnBack"
+            android:layout_width="20dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ingame_header_back" />
 
         <ImageView
-            android:id="@+id/img_lang_vi"
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:src="@drawable/ingame_lang_vi" />
-    </LinearLayout>
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ingame_logo" />
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/header_language"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ingame_language_vie" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+</LinearLayout>

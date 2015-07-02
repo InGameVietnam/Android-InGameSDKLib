@@ -1,0 +1,115 @@
+package com.ingame.demo;
+
+import android.app.Activity;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.ingamesdk.manager.IGReceiver;
+import com.ingamesdk.manager.InGameSDK;
+import com.ingamesdk.model.IGSession;
+
+public class MainActivity extends Activity {
+
+	public static InGameSDK m_InGameSDK = null;
+	public String clientId = "d5cfdd088c71680007be5b1f86ddbc2e";
+	public String clientSecret = "7d8c3ebe702afb69090181551d8dd947";
+	public static MainActivity instance;
+	Button btnLogin, btnRegister;
+	TextView tvInfo;
+	private GameReceiver m_gameReceiver;
+	private IntentFilter filter;
+	private boolean isloggedin = false;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+		instance = this;
+		
+		m_InGameSDK = InGameSDK.getInstance();
+		m_InGameSDK.init(this, true, this.clientId, this.clientSecret);
+		tvInfo = (TextView) findViewById(R.id.tvInfo);
+		btnLogin = (Button) findViewById(R.id.btnLogin);
+		btnRegister = (Button) findViewById(R.id.btnRegister);
+		
+		m_gameReceiver = new GameReceiver();
+		filter = new IntentFilter();
+	}
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		filter.addAction("ingame.login.success");
+		filter.addAction("ingame.logout.success");
+		registerReceiver(m_gameReceiver, filter);
+	}
+	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		unregisterReceiver(m_gameReceiver);
+	}
+	
+	public void login(View v) {
+		if (!isloggedin)
+			m_InGameSDK.Login();
+		else
+			m_InGameSDK.Logout();
+	}
+
+	public void Register(View v) {
+		m_InGameSDK.Register();
+
+	}
+
+	public void switchAccount(View v) {
+		m_InGameSDK.switchUser();
+	}
+
+	public void showUserInfo(View v) {
+		m_InGameSDK.showUserInfo();
+	}
+
+	public void makePayment(View v) {
+		m_InGameSDK.makePayment();
+	}
+
+	private class GameReceiver extends IGReceiver {
+		@Override
+		public void onLoginSuccess(IGSession session) {
+			// TODO Auto-generated method stub
+			tvInfo.setText("Hello " + session.username);
+			tvInfo.setVisibility(View.VISIBLE);
+			btnLogin.setText("Logout");
+			btnRegister.setVisibility(View.GONE);
+			isloggedin = true;
+		}
+
+		@Override
+		public void onLogoutSuccess() {
+			// TODO Auto-generated method stub
+			tvInfo.setVisibility(View.GONE);
+			btnLogin.setText("Login");
+			btnRegister.setVisibility(View.VISIBLE);
+			isloggedin = false;
+		}
+
+		@Override
+		public void onSwitchAccountSuccess(IGSession session) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void onLoginFail() {
+			// TODO Auto-generated method stub
+
+		}
+
+	}
+}

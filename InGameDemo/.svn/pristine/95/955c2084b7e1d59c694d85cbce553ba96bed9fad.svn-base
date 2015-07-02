@@ -1,0 +1,44 @@
+package com.ingame.demo;
+
+import com.ingamesdk.manager.InGameSDK;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+
+import com.ingamesdk.manager.InGameSDK;
+
+public class MainActivity extends Activity {
+
+	public static InGameSDK m_InGameSDK = null;
+	public static String appKey = "aab2a2ccc7560e9d4f8a54e546842736";
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+
+		m_InGameSDK = InGameSDK.getInstance();
+		m_InGameSDK.init(this, this.appKey);
+	}
+
+	public void login(View v) {
+		m_InGameSDK.Login();
+	}
+
+	public void Register(View v) {
+		m_InGameSDK.Register();
+	}
+
+	public void switchAccount(View v) {
+
+	}
+
+	public void showUserInfo(View v) {
+		m_InGameSDK.callShowUserInfo();
+	}
+
+	public void makePayment(View v) {
+		m_InGameSDK.makePayment();
+	}
+}

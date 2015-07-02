@@ -1,0 +1,34 @@
+package com.ingame.demo;
+
+import com.ingamesdk.manager.IGReceiver;
+import com.ingamesdk.model.IGSession;
+
+public class GameReceiver extends IGReceiver {
+
+	@Override
+	public void onLoginSuccess(IGSession user) {
+		String username = user.username;
+		String accessToken = user.accessToken;
+
+		System.out.println("HAHAHA: " + username + ", " + accessToken);
+	}
+
+	@Override
+	public void onLogoutSuccess() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onSwitchAccountSuccess(IGSession paramAppotaSession) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onLoginFail() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

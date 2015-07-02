@@ -4,7 +4,15 @@
         <item name="android:gravity">center_vertical|center_horizontal</item>
         <item name="android:textColor">#FFFFFFFF</item>
         <item name="android:textSize">@dimen/text_size_16</item>
-        <item name="android:background">@drawable/ingame_button_orange</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    
+    <style name="buttonGreen" parent="@android:style/Widget.Button">
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:background">@drawable/ingame_button_green</item>
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
     </style>
@@ -20,18 +28,15 @@
        <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:width">350dp</item>
-        <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center_vertical|center_horizontal</item>
         <item name="android:windowBackground">@android:color/transparent</item>
    </style>	
 
-    <style name="UserDialog" parent="android:style/Theme.Holo.Light.Dialog">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">true</item>
+    <style name="UserDialog" parent="android:style/Theme.Holo.Light">
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:scrollbarThumbVertical">@drawable/ingame_scrollbar_vertical_thumb</item>
+        <item name="android:scrollbarSize">4dp</item>
     </style>
 
     <style name="ProgressDialog" parent="android:style/Theme.Holo.Light.Dialog">

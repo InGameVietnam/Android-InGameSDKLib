@@ -1,183 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:widget="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/login_scrollView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:background="@drawable/ingame_bg_dialog" >
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ScrollView
+        android:id="@+id/login_scrollView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:padding="20dp" >
 
-       <include layout="@layout/ingame_comp_title" />
-       <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:orientation="vertical" >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical" >
-              <com.ingamesdk.widget.IGTextView
-                android:id="@+id/txt_Title_ForgotPassword"
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:textColor="#000000"
-                android:textSize="@dimen/text_size_18"/>
-              
-                <com.ingamesdk.widget.IGEditText
-                android:id="@+id/forget_txtUsername"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/ingame_rounded_edittext"
-                android:ems="15"
-                android:inputType="text"
-                android:paddingBottom="8dp"
-                android:paddingLeft="3dp"
-                android:paddingTop="8dp"
-                android:textSize="@dimen/text_size_15" />
-        </LinearLayout>
-          <RelativeLayout
-            android:id="@+id/expandBtnMail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/ingame_rounded_expandable_button"
-            android:gravity="center_vertical">
-            <ImageView 
-                android:id="@+id/imgexpandmail"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ingame_img_expand1"
-                android:layout_centerVertical="true"/>
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal" >
 
-            <com.ingamesdk.widget.IGTextView
-                android:id="@+id/forget_txtMail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@drawable/ingame_expand_text_selector"
-                android:textSize="@dimen/text_size_15"
-                android:paddingLeft="5dp"
-                android:layout_toRightOf="@+id/imgexpandmail"/>
-          </RelativeLayout>   
-        <LinearLayout
-            android:id="@+id/forgotlayoutMail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:visibility="visible"
-            android:orientation="vertical" 
-            android:background="@drawable/ingame_rounded_layout">
-			<com.ingamesdk.widget.IGTextView
-			    android:id="@+id/decriptionMail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:textSize="@dimen/text_size_12"
-                android:paddingLeft="5dp"
-                android:layout_toRightOf="@+id/imgexpandmail"/>
-            <com.ingamesdk.widget.IGEditText
-                android:id="@+id/forget_txtEmailPhone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/ingame_rounded_edittext"
-                android:ems="15"
-                android:inputType="text"
-                android:paddingBottom="8dp"
-                android:paddingLeft="3dp"
-                android:paddingTop="8dp"
-                android:textSize="@dimen/text_size_15" />
+                <LinearLayout
+                    android:id="@+id/btn_tab_Mail"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ingame_button_tab"
+                    android:clickable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical" >
 
-           <com.ingamesdk.widget.IGButton
-                android:id="@+id/forget_btnSubmit"
-                style="@style/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/ingame_button_orange"
-                android:paddingBottom="10dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="10dp"
-                android:layout_gravity="center"
-                android:textSize="@dimen/text_size_16" />
-        </LinearLayout>
-        
-         <RelativeLayout
-            android:id="@+id/expandBtnSMS"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:gravity="center_vertical"
-            android:background="@drawable/ingame_rounded_expandable_button">
-			 <ImageView
-				android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ingame_img_expand"
-                android:id="@+id/imgexpandSMS"
-				android:layout_centerVertical="true"/>
-            <com.ingamesdk.widget.IGTextView
-                android:id="@+id/forget_txtSMS"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@drawable/ingame_expand_text_selector"
-                android:textSize="@dimen/text_size_15"
-                android:paddingLeft="5dp"
-                android:layout_toRightOf="@+id/imgexpandSMS"/>
-          </RelativeLayout>   
-         <LinearLayout
-            android:id="@+id/forgotlayoutSMS"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:orientation="vertical"
-            android:visibility="gone" 
-            android:background="@drawable/ingame_rounded_layout">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip"
+                        android:text="@string/txt_ExpandBtn_Mail"
+                        android:textColor="@drawable/ingame_tab_text_selector" />
+                </LinearLayout>
 
-            <com.ingamesdk.widget.IGTextView
-                 android:id="@+id/decriptionSMS"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:textColor="#000000"
-                android:textSize="@dimen/text_size_12" />
+                <LinearLayout
+                    android:id="@+id/btn_tab_SMS"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ingame_button_tab_right"
+                    android:clickable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical" >
 
-            <com.ingamesdk.widget.IGButton
-                android:id="@+id/forget_btnSendSMS"
-                style="@style/button"
-                android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dip"
+                        android:text="@string/txt_ExpandBtn_SMS"
+                        android:textColor="@drawable/ingame_tab_text_selector" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/forgotlayoutContainer"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/ingame_button_orange"
-                android:paddingBottom="10dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="10dp"
-                android:layout_gravity="center"
-                android:textSize="@dimen/text_size_16" />
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/box_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ingame_edittext_bg"
+                        android:gravity="left|center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="5dp"
+                            android:src="@drawable/ingame_avatar" />
+
+                        <com.ingamesdk.widget.IGEditText
+                            android:id="@+id/forget_txtUsername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:ems="15"
+                            android:inputType="textNoSuggestions"
+                            android:maxLength="16"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/edittext_color"
+                            android:textCursorDrawable="@drawable/ingame_textfield_cusor"
+                            android:textSize="@dimen/text_size_15" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/forgotlayoutMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/ingame_edittext_bg"
+                        android:gravity="left|center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="5dp"
+                            android:src="@drawable/ingame_email" />
+
+                        <com.ingamesdk.widget.IGEditText
+                            android:id="@+id/forget_txtEmailPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:ems="15"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/edittext_color"
+                            android:textCursorDrawable="@drawable/ingame_textfield_cusor"
+                            android:textSize="@dimen/text_size_15" />
+                    </LinearLayout>
+
+                    <com.ingamesdk.widget.IGButton
+                        android:id="@+id/forget_btnSubmit"
+                        style="@style/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ingame_button_selector"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/forgotlayoutSMS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <com.ingamesdk.widget.IGButton
+                        android:id="@+id/forget_btnSendSMS"
+                        style="@style/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ingame_button_selector"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <com.ingamesdk.widget.IGTextView
+                    android:id="@+id/decriptionSMS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/com_ingamesdk_color_mainColor"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
         </LinearLayout>
-        </LinearLayout>
-        <include layout="@layout/ingame_comp_version" />
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+
+</RelativeLayout>

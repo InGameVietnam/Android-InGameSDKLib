@@ -1,5 +1,5 @@
 <resources>
-    <string name="version">Version 1.0</string>
+    <string name="sdkversion">Version 2.0</string>
     <string name="login">Login</string>
     <string name="yes">OK</string>
     <string name="no">NO</string>
@@ -11,7 +11,7 @@
     <string name="submit">Submit</string>
     <string name="refresh">Refresh</string>
     <string name="please_wait">Please wait...</string>
-    <string name="login_title">Fill out your name and password</string>
+    <string name="login_title">Login to your account</string>
     <string name="fill_info">Fill out your information</string>
     <string name="login_username">Username</string>
     <string name="login_password">Password</string>
@@ -44,6 +44,8 @@
     <string name="TXT_TAB_TRANSACTION">Transaction Log</string>
     <string name="TXT_LOGING_IN">Loging.....</string>
     <!-- show user infor -->
+    <string name="tab_user_title">User Information</string>
+    <string name="tab_trans_title">Transaction Log</string>
     <string name="userinfo_user_name">Username</string>
     <string name="userinfo_update_password">Do you wanna change password?</string>
     <string name="userinfo_new_pass">New password</string>
@@ -99,7 +101,8 @@
     <string name="txt_choose_card_type">Please supply card info:</string>
     <string name="txt_card_serial">Please fill serial number</string>
     <string name="txt_card_pinnumber">Please fill card code</string>
-    <string name="txt_card_info">Regulations conversion</string>
+    <string name="txt_card_info">Regulations conversion list</string>
+	<string name="txt_regulations_title">Regulations conversion</string>
     <string name="paymentSuccessful">Payment successful</string>
     <string name="captcha_charactor">Enter the correct characters in the image above</string>
 
@@ -116,12 +119,12 @@
     <string name="transaction_confirm">Transaction information</string>
     
     <string name="txt_Title_ForgotPass">Forgot Password</string>
-	<string name="txt_ExpandBtn_Mail">Reset password via Email</string>
-	<string name="txt_Expand_Decription_Mail">Enter your email address to reset your password. You may need to check your spam folder.</string>
+	<string name="txt_ExpandBtn_Mail">Via Email</string>
+	<string name="txt_Expand_Decription_Mail">* Enter your email address to reset your password. <br>You may need to check your spam folder.</br></string>
 	<string name="txt_ExpandBtnText_Mail">Submit</string>
 	
-	<string name="txt_ExpandBtn_SMS">Reset password via SMS</string>
-	<string name="txt_Expand_Decription_SMS"><b>+ </b> Compose a message with syntax: <br><br><b>Ingame MK</b> [<b>USERNAME</b>] send to <b>8698</b></br></br><br><br><b>+ </b>Support only to mobile network operators : <b>Viettel, Vinaphone, Mobiphone, VietnamMobi.</b></br></br><br><br><b>+ </b>Cost 500 VNĐ/sms</br></br></string>
+	<string name="txt_ExpandBtn_SMS">Via SMS</string>
+	<string name="txt_Expand_Decription_SMS">* Compose a message with syntax: <br><b>Ingame MK</b> [<b>USERNAME</b>] send to <b>8698</b></br><br>* Support only to mobile network operators : </br><br><b>Viettel, Vinaphone, Mobiphone, VietnamMobi.</b></br><br>* Cost 500 VND/sms</br></string>
 	<string name="txt_ExpandBtnText_SMS">Send SMS</string>
 	
 	<!-- friend list -->
@@ -129,8 +132,18 @@
 	<string name="title_pickfriend">Please pick who you want to send</string>
 	<string name="msg_post_completed">Sent successfully!</string>
 	<string name="post_message">Come and play game with me!</string>
+	<string name="txt_btn_send">Send</string>
 	
 	<!-- More game -->
 	<string name="caption_moregame">More Games</string>
 	<string name="downloaded_players_text">players</string>
+	
+	<!--  footer zone -->
+	<string name="txt_userinfo_title">Account</string>
+	<string name="txt_moregame_title">MoreGames</string>
+	<string name="txt_share_title">Share</string>
+	<string name="txt_exit_title">Logout</string>
+	
+	<!-- AlertDialog -->
+	<string name="txt_AlertDialog_Title">Notification</string>
 </resources>

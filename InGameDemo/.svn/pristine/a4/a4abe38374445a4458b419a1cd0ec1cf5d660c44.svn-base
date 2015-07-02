@@ -1,0 +1,42 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal" 
+    android:layout_margin="20dp">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="login"
+        android:text="Login" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Register"
+        android:text="Register" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="makePayment"
+        android:text="Make Payment" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showUserInfo"
+        android:text="Show User" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="switchAccount"
+        android:text="Switch Account" />
+
+    <!-- <com.appota.payment.widget.SDKButton -->
+    <!-- android:id="@+id/com_appota_sdk_button" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" /> -->
+
+</TableLayout>

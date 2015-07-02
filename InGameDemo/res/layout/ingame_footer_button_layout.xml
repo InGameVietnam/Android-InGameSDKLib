@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:orientation="vertical" 
+    android:clickable="true"
+    android:background="@drawable/ingame_menu_button"
+    android:gravity="center_vertical|center_horizontal">
+	<ImageView 
+	    android:layout_width="35dp"
+	    android:layout_height="35dp"
+	    android:id="@+id/menu_button"/>
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/menu_button_text"
+	    android:textColor="@drawable/ingame_menu_button_text_selector"
+	    android:text="test"/>
+</LinearLayout>

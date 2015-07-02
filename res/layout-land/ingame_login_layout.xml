@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:widget="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/com_ingamesdk_color_mainColor" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.ingamesdk.widget.IGTextView
+                    android:id="@+id/caption_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_18" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ingame_rounded_layout"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.ingamesdk.widget.IGEditText
+                            android:id="@+id/login_username"
+                            android:layout_width="240dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:ems="15"
+                            android:hint="Tài khoản"
+                            android:inputType="textPassword"
+                            android:textColor="@color/edittext_color"
+                            android:textColorHighlight="#FF434343"
+                            android:textCursorDrawable="@drawable/ingame_textfield_cusor"
+                            android:textSize="@dimen/text_size_15" />
+
+                        <ImageButton
+                            android:id="@+id/login_btnClearUsername"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:background="@android:color/transparent"
+                            android:paddingRight="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ingame_edittext_clear" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:background="@color/header_divider" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.ingamesdk.widget.IGEditText
+                            android:id="@+id/login_txtpassword"
+                            android:layout_width="240dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:ems="15"
+                            android:hint="Mật khẩu"
+                            android:inputType="textPassword"
+                            android:textColor="@color/edittext_color"
+                            android:textColorHighlight="#FF434343"
+                            android:textCursorDrawable="@drawable/ingame_textfield_cusor"
+                            android:textSize="@dimen/text_size_15" />
+
+                        <ImageButton
+                            android:id="@+id/login_btnViewPass"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:alpha="0.4"
+                            android:background="@android:color/transparent"
+                            android:paddingRight="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ingame_eye" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33333333"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/login_btnQuickLogin"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ingame_login_quick" />
+
+                    <com.ingamesdk.widget.IGTextView
+                        android:id="@+id/login_tvQuickLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Chơi thử"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.34"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <com.ingamesdk.widget.IGButton
+                        android:id="@+id/login_btnLogin"
+                        style="@style/buttonGreen"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:text="ĐĂNG NHẬP"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <com.ingamesdk.widget.IGTextView
+                        android:id="@+id/login_forgot_pass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Quên mật khẩu ?"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33333333"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/login_btnFacebookLogin"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ingame_login_facebook" />
+
+                    <com.ingamesdk.widget.IGTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Facebook"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/login_btnRegister"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ingame_user" />
+
+                    <com.ingamesdk.widget.IGTextView
+                        android:id="@+id/login_lblRegister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Đăng ký"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ingame_arrow_down" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+ <com.ingamesdk.widget.IGTextView
+     android:id="@+id/login_sdkversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sdkversion"
+        android:textColor="#ffffff"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/text_size_10" />
+</RelativeLayout>

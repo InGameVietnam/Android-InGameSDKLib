@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!--declear for color -->
-	<color name="black">#99000000</color>
+
+    <!-- declear for color -->
+
+    <color name="com_menu_text_normal">#acd7ee</color>
+    <color name="com_menu_text_selected">#ffffff</color>
+    <color name="com_menu_devider">#1275ab</color>
+    <color name="com_ingamesdk_color_mainColor">#00a1d9</color>
+    <color name="com_ingamesdk_color_pressColor">#37c3f4</color>
+    <color name="header_divider">#ffc3c3c3</color>
+    <color name="edittext_color">#4c4c4c</color>
+    <color name="black">#99000000</color>
     <color name="bg_header_color">#ffbdb9b9</color>
     <color name="black_text_color">#000000</color>
     <color name="button_green">#56b436</color>
@@ -25,4 +34,5 @@
     <color name="color_black">#000000</color>
     <color name="color_white">#ffffff</color>
     <color name="button_item">#3C474747</color>
+
 </resources>

@@ -1,0 +1,42 @@
+package com.ingame.demo;
+
+import android.view.View;
+
+import com.ingamesdk.manager.IGReceiver;
+import com.ingamesdk.model.IGSession;
+
+public class GameReceiver extends IGReceiver {
+	public static IGSession user = new IGSession();
+
+	@Override
+	public void onLoginSuccess(IGSession session) {
+		user.username = session.username;
+		user.accessToken = session.accessToken;
+		user.refreshToken = session.refreshToken;
+		user.userId = session.userId;
+		user.email = session.email;
+		MainActivity.instance.btnLogin.setVisibility(View.GONE);
+		MainActivity.instance.btnRegister.setVisibility(View.GONE);
+		MainActivity.instance.tvInfo.setText("Xin chào: " + GameReceiver.user.username + ", " + GameReceiver.user.userId + ", " + GameReceiver.user.accessToken + ", "
+				+ GameReceiver.user.refreshToken + ", " + GameReceiver.user.email);
+	}
+
+	@Override
+	public void onLogoutSuccess() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onSwitchAccountSuccess(IGSession paramAppotaSession) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onLoginFail() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -3,17 +3,18 @@
     xmlns:widget="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/ingame_bg_dialog" >
+    android:background="@drawable/ingame_rounded_layout" >
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/transparent"
         android:orientation="vertical" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="#e1dddd" >
+            android:background="@android:color/transparent" >
 
             <TextView
                 android:id="@+id/caption_captcha_input"
@@ -44,6 +45,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
             android:orientation="vertical" >
 
             <ImageView
@@ -53,12 +55,12 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
-                android:src="@drawable/ingame_avatar" />
+                android:src="@drawable/ingame_icon_diamond" />
 
             <com.ingamesdk.widget.IGEditText
                 android:id="@+id/capcha_txtInput"
                 android:layout_width="match_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="30dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
@@ -67,6 +69,8 @@
                 android:inputType="text"
                 android:maxLength="4"
                 android:padding="5dp"
+               android:textColor="@color/edittext_color"
+                android:textColorHint="@android:color/darker_gray"
                 android:textSize="@dimen/text_size_15" />
 
             <RelativeLayout
@@ -77,12 +81,11 @@
 
                 <com.ingamesdk.widget.IGButton
                     android:id="@+id/capcha_btnOK"
-                    style="@style/button"
-                    android:layout_width="wrap_content"
+                    style="@style/buttonGreen"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:background="@drawable/ingame_button_orange"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
@@ -91,12 +94,11 @@
 
                 <com.ingamesdk.widget.IGButton
                     android:id="@+id/capcha_btnRefresh"
-                    style="@style/button"
-                    android:layout_width="wrap_content"
+                    style="@style/buttonGreen"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:background="@drawable/ingame_button_orange"
                     android:paddingBottom="10dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"

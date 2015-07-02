@@ -4,109 +4,103 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:background="@drawable/ingame_bg_dialog"
+    android:background="@android:color/white"
+    android:padding="20dp"
     android:orientation="vertical" >
-    <include layout="@layout/ingame_comp_title" />
-    <ScrollView 
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_gravity="center_horizontal"
-     android:background="@drawable/ingame_bg_dialog"
-     android:fadeScrollbars="false"
-     android:orientation="vertical">
-        <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:orientation="vertical">
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ingame_rounded_title_shape"
+        android:clickable="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/caption_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/com_ingamesdk_color_mainColor"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fadeScrollbars="false"
+        android:orientation="vertical" >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/caption_id"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black_text_color"
-                android:textSize="@dimen/text_size_15"
-                android:textStyle="bold" />
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical" >
 
-            <Spinner
-                android:id="@+id/cardlist"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp" />
+                <Spinner
+                    android:id="@+id/cardlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
+                <com.ingamesdk.widget.IGEditText
+                    android:id="@+id/card_serial"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/ingame_edittext_bg"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_15" />
 
-            <com.ingamesdk.widget.IGEditText
-                android:id="@+id/card_serial"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@drawable/ingame_rounded_edittext"
-                android:padding="10dp"
-                android:singleLine="true"
-                android:textSize="@dimen/text_size_15" />
+                <com.ingamesdk.widget.IGEditText
+                    android:id="@+id/card_pinnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/ingame_edittext_bg"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_size_15" />
 
-            <com.ingamesdk.widget.IGEditText
-                android:id="@+id/card_pinnumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@drawable/ingame_rounded_edittext"
-                android:imeOptions="actionDone"
-                android:padding="10dp"
-                android:singleLine="true"
-                android:textSize="@dimen/text_size_15" />
+                <com.ingamesdk.widget.IGButton
+                    android:id="@+id/btnCardPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ingame_button_selector"
+                    android:textColor="@drawable/ingame_button_text_selector"
+                    android:textSize="@dimen/text_size_16" />
 
-            <com.ingamesdk.widget.IGButton
-                android:id="@+id/btnCardPayment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/ingame_button_green"
-                android:textSize="@dimen/text_size_16" />
+                <LinearLayout
+                    android:id="@+id/card_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/regulations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/com_ingamesdk_color_mainColor"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:src="@drawable/ingame_arrow_blue_down" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-       <RelativeLayout
-           android:id="@+id/expandBtnRegular"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:layout_marginLeft="20dp"
-           android:layout_marginRight="20dp"
-           android:layout_marginTop="10dp"
-           android:gravity="center_vertical"
-           android:background="@drawable/ingame_rounded_expandable_button">
-		 <ImageView
-			android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:src="@drawable/ingame_img_expand"
-               android:id="@+id/imgexpand"
-			android:layout_centerVertical="true"/>
-            <com.ingamesdk.widget.IGTextView
-               android:id="@+id/card_packages_info"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textColor="#000000"
-               android:textSize="@dimen/text_size_15"
-               android:paddingLeft="5dp"
-               android:layout_toRightOf="@+id/imgexpand"/>
-         </RelativeLayout>   
+    </ScrollView>
 
-         <LinearLayout
-             android:id="@+id/packages"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="20dp"
-             android:layout_marginRight="20dp"
-             android:layout_marginBottom="10dp"
-             android:visibility="gone"
-             android:orientation="vertical" >
-         </LinearLayout>
-        <include layout="@layout/ingame_comp_version" />
-	 </LinearLayout>
-     </ScrollView>
 </LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="-2dp"
+    android:insetRight="-2dp">
+
+    <shape android:shape="rectangle">
+        <stroke android:width="0.2dp" android:color="@color/com_menu_devider" />
+        <solid android:color="@color/com_ingamesdk_color_mainColor" />
+    </shape>
+
+</inset>
