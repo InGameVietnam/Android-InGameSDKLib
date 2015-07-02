@@ -1,4 +1,4 @@
-Other languages: [Vietnamese](README_VI.md)
+Other languages: [Vietnamese](README_VI.md) | [Chinese](README_CN.md)
 ###DOCUMENT FOR INTEGRATED SYSTEM INGAMESDK
 
 **Introduction**
