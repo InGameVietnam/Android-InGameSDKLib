@@ -25,7 +25,7 @@ Ingame SDK 集成登陆和支付， 登陆包括快速登陆和facebook登录 ,�
 
 ### I. 下载 SDK
 
-https://github.com/ingamevietnam/android-ingamesdklib/archive/master.zip
+https://github.com/ingamevietnam/android-ingamesdklib/archive/master.zip<br/>
 https://github.com/ingamevietnam/android-ingamesdklib.git
 
 ###II.整合和配置SDK
