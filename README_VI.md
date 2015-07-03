@@ -1,4 +1,4 @@
-Ngôn ngữ khác: [English](README.md)
+Ngôn ngữ khác: [English](README.md) | [Chinese] (README_CN.md)
 ##TÀI LIỆU HƯỚNG DẪN TÍCH HỢP HỆ THỐNG INGAMESDK
 
 **Giới thiệu**
@@ -263,76 +263,4 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 
 Ứng dụng minh họa đi kèm SDK là một ví dụ đơn giản cho việc tích hợp. 
 
-<table border="0">
-    <tr>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture4_zps7h9ax8od.png">
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture5_zpsnce3ybz6.png" width>
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture6_zpsuzqramsf.png" width>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <i>Giao diện chọn phương thức đăng nhập</i>
-        </td>
-        <td>
-            <i>Giao diện đăng nhập</i>
-        </td>
-        <td>
-          <i> Giao diện đăng ký tài khoản mới </i>
-        </td>
-    </tr>
-    
-        <tr>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture7_zpspqowr2jh.png">
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture8_zpsnkkspvqy.png" width>
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture9_zpslkkqbbpc.png" width>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <i>Giao diện quên mật khẩu</i>
-        </td>
-        <td>
-            <i>Giao diện thông tin tài khoản</i>
-        </td>
-        <td>
-          <i> Giao diện Lịch sử giao dịch </i>
-        </td>
-    </tr>
-    
-        <tr>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture10_zpsvz7fuw4b.png">
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture11_zpsfmaxax7g.png" width>
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture12_zpstgtkbzte.png" width>
-        </td>
-    </tr>
-    <tr>
-        <td textAlign="center">
-            <i>Giao diện chọn phương thức thanh toán</i>
-        </td>
-        <td textAlign="center">
-            <i>Giao diện thanh toán bằng thẻ cào điện thoại</i>
-        </td>
-        <td textAlign="center">
-          <i> Giao diện thanh toán bằng Internet Banking </i>
-        </td>
-    </tr>
-
-
-
-</table>
+![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Capture_zps7vmykcsm.png)
