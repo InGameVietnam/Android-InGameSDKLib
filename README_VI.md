@@ -263,5 +263,4 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 
 Ứng dụng minh họa đi kèm SDK là một ví dụ đơn giản cho việc tích hợp. 
 
-You can see the more detail in the attached sample code. 
 ![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Capture_zps7vmykcsm.png)
