@@ -243,45 +243,5 @@ https://github.com/ingamevietnam/android-ingamesdklib.git
 
 ####IV. 运行sdk
 
-
-
-<table border="0">
-    <tr>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture4_zps7h9ax8od.png">
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture5_zpsnce3ybz6.png" width>
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture6_zpsuzqramsf.png" width>
-        </td>
-    </tr>
-    
-    
-        <tr>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture7_zpspqowr2jh.png">
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture8_zpsnkkspvqy.png" width>
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture9_zpslkkqbbpc.png" width>
-        </td>
-    </tr>
-   
-    
-        <tr>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture10_zpsvz7fuw4b.png">
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture11_zpsfmaxax7g.png" width>
-        </td>
-        <td width ="500px">
-            <img src="http://i757.photobucket.com/albums/xx212/ichirokudo/Ingame/Picture12_zpstgtkbzte.png" width>
-        </td>
-    </tr>
-   
-</table>
+You can see the more detail in the attached sample code. 
+![add](http://i757.photobucket.com/albums/xx212/ichirokudo/Capture_zps7vmykcsm.png)
