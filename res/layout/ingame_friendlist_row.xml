@@ -10,7 +10,7 @@
         android:orientation="horizontal"
         android:layout_gravity="start|center_vertical"
         android:gravity="center_vertical|center_horizontal">
-        <ImageView
+        <com.android.volley.toolbox.NetworkImageView
 	        android:id="@+id/icon"
 	        android:layout_width="50dp"
 	        android:layout_height="50dp"
