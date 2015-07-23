@@ -19,9 +19,9 @@ InGameSDK là hệ thống tích hợp tài khoản và thanh toán cho ứng d�
 
 ### I. Tải hệ thống SDK
 
-Tải InGame SDK tại địa chỉ: https://github.com/ingamevietnam/android-ingamesdklib/archive/master.zip
+Tải InGame SDK tại địa chỉ: https://github.com/InGameVietnam/Android-InGameSDKLib/archive/version-2.0.zip
 
-Hoặc sử dụng công cụ git tool để clone từ đường dẫn này: https://github.com/ingamevietnam/android-ingamesdklib.git
+Hoặc sử dụng công cụ git tool để clone từ đường dẫn này: https://github.com/InGameVietnam/Android-InGameSDKLib.git
 
 ###II. Các bước tích hợp và cấu hình
 ####A. Tích hợp: 
