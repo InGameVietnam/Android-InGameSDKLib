@@ -161,7 +161,8 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 ###III. Cách thức khai báo, khởi tạo và gọi các chức năng của SDK từ ứng dụng của bạn
 <b>Khai báo ```Interface``` để nhận về các sự kiện từ SDK from the SDK</b>
 
-```
+
+	```
 　　 public class Listener implements IGListenerInterface{
 
         @Override
@@ -189,17 +190,15 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
             // TODO Auto-generated method stub
         }
     }
-```
-
+    
+    ```
 
 <b>Khai báo các biến sau vào bên trong lớp Activity chính của ứng dụng:</b>
 
-```
 	public static InGameSDK ingame_sdk = InGameSDK.getInstance(); // instance của InGameSDK
-```　　
 
 <b>Thiết lập các giá trị cho InGameSDK bên trong hàm onCreate(...)</b>
-```
+
 	ingame_sdk.callSendInstallationEvent(this); //Hàm này phải được gọi trong hàm OnCreate() và trước hàm Init của SDK
 
 	Listener listener = new Listener();// init your listener
@@ -207,12 +206,12 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 	ingame_sdk.init(this, true, true, callback_url);
 
 	ingame_sdk.setListener(listener);//set your listener to sdk
-```
+
 <b>Các tham số của hàm ingame_sdk.init(...)</b>
 
-```
+
 　　public void init(Activity context, boolean isButton, boolean isAutoLogin, String callback_url) {...}
-```
+
 
 >```context```:  Activity chính của ứng dụng<br/>
 >```isButton```: Tham số sử dụng nút phím tắt của SDK<br/>
@@ -220,32 +219,34 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 >```callback_url```: Đường link gọi callback của Server<br/>
 
 <b>Thêm các xử lý sau vào tương ứng từng hàm</b>
-```
-　　@Override
-    protected void onResume() {
-        super.onResume();
-        InGameSDK.getInstance().onResume(this);
-    }
-
+    
     @Override
-    protected void onPause() {
-        super.onPause();
-         InGameSDK.getInstance().onPause();
-    }
-
+        protected void onResume() {
+            super.onResume();
+            InGameSDK.getInstance().onResume(this);
+        }
+        
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        InGameSDK.getInstance().onActivityResult(requestCode, resultCode, data);
-    }
-```
+        protected void onPause() {
+            super.onPause();
+             InGameSDK.getInstance().onPause();
+        }
+        
+    @Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+            InGameSDK.getInstance().onActivityResult(requestCode, resultCode, data);
+        }
+
 
 <b>Gọi hàm tương ứng với các chức năng mà SDK cung cấp cho từng thao tác:</b>
+
+
 ```
-　    Đăng ký: 							  ingame_sdk.callRegister();<br/>
+　  Đăng ký: 							ingame_sdk.callRegister();<br/>
 　　Đăng nhập:				       		ingame_sdk.callLogin();<br/>
 　　Đăng xuất: 							ingame_sdk.callLogout();<br/>
-　　Hiển thị thông tin tài khoản: 		ingame_sdk.callshowUserInfo();<br/>
+　　Hiển thị thông tin tài khoản: 	    ingame_sdk.callshowUserInfo();<br/>
 　　Thanh toán: 							 ingame_sdk.callPayment(String game_order); // game_order:Mã giao dịch do 
 　　Nhà phát triển tự tạo ra (nhỏ hơn 50 ký tự)..<br/>
 　　Invite Friend (Show sdk UI)         ingame_sdk.callInviteFriend();// Hiển thị giao diện mời bạn của SDK<br/>
