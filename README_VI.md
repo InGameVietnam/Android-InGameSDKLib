@@ -19,9 +19,9 @@ InGameSDK là hệ thống tích hợp tài khoản và thanh toán cho ứng d�
 
 ### I. Tải hệ thống SDK
 
-Tải InGame SDK tại địa chỉ: https://github.com/ingamevietnam/android-ingamesdklib/archive/master.zip
+Tải InGame SDK tại địa chỉ: https://github.com/InGameVietnam/Android-InGameSDKLib/archive/version-2.0.zip
 
-Hoặc sử dụng công cụ git tool để clone từ đường dẫn này: https://github.com/ingamevietnam/android-ingamesdklib.git
+Hoặc sử dụng công cụ git tool để clone từ đường dẫn này: https://github.com/InGameVietnam/Android-InGameSDKLib.git
 
 ###II. Các bước tích hợp và cấu hình
 ####A. Tích hợp: 
@@ -88,35 +88,10 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 　　<uses-permission android:name="android.permission.WAKE_LOCK" />
 　　<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 　　<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-　　
- 	<!-- Google Cloud Message Permission -->
-　　<permission
-　　　　android:name="<your_package_name>.permission.C2D_MESSAGE"
-　　　　android:protectionLevel="signature" />
-    	<uses-permission android:name="<your_package_name>.C2D_MESSAGE" />
-    	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
 　　<!-- Google IAP Permission -->
     	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 　　<uses-permission android:name="com.android.vending.BILLING" />
-```
-- Thêm các thẻ  ```<receiver>,<service> ``` bên trong thẻ ```<application>``` để nhận thông báo từ <b>Google Cloud Messaging</b>:
-
-```
-　　<application
-　　　　...........................
-　　　　<receiver
-　　　　　　android:name="com.ingamesdk.pushnotification.GcmBroadcastReceiver"
-　　　　　　android:permission="com.google.android.c2dm.permission.SEND" >
-　　　　　　<intent-filter>
-　　　　　　　　<!-- Receives the actual messages. -->
-　　　　     		<action android:name="com.google.android.c2dm.intent.RECEIVE" />
-　　　　　　　　<category android:name="<your_package_name>" />
-　　　　　　</intent-filter>
-　　　　</receiver>
-　　　　<service android:name="com.ingamesdk.pushnotification.GcmIntentService" />
-　　　　...........................
-　　</application>
 ```
 - Thêm các thẻ ```<meta-data>``` bên trong thẻ ```<application>``` để cấu hình các giá trị cho hệ thống:
 
@@ -134,20 +109,21 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 　　　　　　android:value="@string/google_license_key" />
 　　　　<meta-data android:name="com.IngameSDK.AppId" 
 　　　　    android:value="@string/App_Id" />
-        <meta-data android:name="com.IngameSDK.AppKey" 
-            android:value="@string/App_Key" />
-       
-         <!--  for app flyer -->
-        <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
-	<intent-filter>
-	<action android:name="com.android.vending.INSTALL_REFERRER" />
-	</intent-filter>
-	</receiver>
-	<receiver android:name="com.appsflyer.AppsFlyerLib" android:exported="true">
-	<intent-filter>
-	<action android:name="com.android.vending.INSTALL_REFERRER" />
-	</intent-filter>
-	</receiver>
+    <meta-data android:name="com.IngameSDK.AppKey" 
+        android:value="@string/App_Key" />
+
+     <!--  for app flyer -->
+        <receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.appsflyer.AppsFlyerLib">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
         <meta-data android:name="com.appflyer.dev_key" 
              android:value="ekymUhihizGufaXWaeH5nn" />
         <!--  end for app flyer -->
@@ -159,7 +135,7 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 ```
 　　<application>
 　　　　...........................
- 	<activity
+    <activity
             android:name="com.ingamesdk.ui.LoginActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/UserDialog"
@@ -174,49 +150,68 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
             android:theme="@style/UserDialog"
             android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.ingamesdk.ui.AdditionalServicesActivity"
+            android:theme="@style/UserDialog"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name="com.facebook.LoginActivity" />
 　　　　...........................
 　　</application>
 ```
 ###III. Cách thức khai báo, khởi tạo và gọi các chức năng của SDK từ ứng dụng của bạn
-<b>Khai báo lớp ```Receiver.java``` để nhận về các sự kiện từ SDK from the SDK</b>
+<b>Khai báo ```Interface``` để nhận về các sự kiện từ SDK from the SDK</b>
 
-```
-　　private class GameReceiver extends IGReceiver {
-		
-　　　　@Override
-		public void onLoginSuccess(IGSession session) {
-		}
 
-		@Override
-		public void onLogoutSuccess() {
-		}
-	}
-```
+	```
+　　 public class Listener implements IGListenerInterface{
 
->Thông qua biến session bạn có thể lấy được thông tin của tài khoản bằng cách gọi những hàm sau:<br/>
-> ```session.getUserName()```: Tên tài khoản đăng nhập <br/>
-> ```session.getUserId()```: Số ID của tài khoản hiện tại <br/>
-> ```session.getAccessToken()```: Access token <br/>
-> ```session.getEmail()```: Thông tin email của tài khoản <br/>
-> ```session.getPhone()```: Thông tin số điện thoại của tài khoảnr <br/>
+        @Override
+        public void LoginSuccessListener(JSONObject json) {
+                        //Through the session variable you can get account information by:
+                        //json.getString("userID");
+                        //json.getString("userName");
+                        //json.getString("accessToken");
+                        //json.getString("phone");
+                        //json.getString("email");
+        }
 
-　　
+        @Override
+        public void LogOutSuccessListener() {
+            // TODO Auto-generated method stub
+        }
+
+        @Override
+        public void GetFriendListSuccessListener(JSONObject json) {
+            // TODO Auto-generated method stub
+        }
+
+        @Override
+        public void InviteFriendSuccessListener() {
+            // TODO Auto-generated method stub
+        }
+    }
+    
+    ```
+
 <b>Khai báo các biến sau vào bên trong lớp Activity chính của ứng dụng:</b>
 
-	private GameReceiver game_receiver = new GameReceiver();
-	private IntentFilter filter = new IntentFilter();
 	public static InGameSDK ingame_sdk = InGameSDK.getInstance(); // instance của InGameSDK
-　　
+
 <b>Thiết lập các giá trị cho InGameSDK bên trong hàm onCreate(...)</b>
+
+	ingame_sdk.callSendInstallationEvent(this); //Hàm này phải được gọi trong hàm OnCreate() và trước hàm Init của SDK
+
+	Listener listener = new Listener();// init your listener
 
 	ingame_sdk.init(this, true, true, callback_url);
 
+	ingame_sdk.setListener(listener);//set your listener to sdk
+
 <b>Các tham số của hàm ingame_sdk.init(...)</b>
 
-```
+
 　　public void init(Activity context, boolean isButton, boolean isAutoLogin, String callback_url) {...}
-```
+
 
 >```context```:  Activity chính của ứng dụng<br/>
 >```isButton```: Tham số sử dụng nút phím tắt của SDK<br/>
@@ -224,38 +219,39 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 >```callback_url```: Đường link gọi callback của Server<br/>
 
 <b>Thêm các xử lý sau vào tương ứng từng hàm</b>
-```
-　　@Override
-	protected void onResume() {
-		super.onResume();
-		filter.addAction(this.getPackageName() + "ingame.login.success");
-		filter.addAction(this.getPackageName() + "ingame.logout.success");
-		registerReceiver(game_receiver, filter);
-		ingame_sdk.addSDKButton(this);
-		ingame_sdk.setContext(this);
-	}
-	
-	@Override
-	protected void onPause() {
-		super.onPause();
-		ingame_sdk.removeSDKButton(this);
-	}
-	
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		unregisterReceiver(game_receiver);
-	}
-```
+    
+    @Override
+        protected void onResume() {
+            super.onResume();
+            InGameSDK.getInstance().onResume(this);
+        }
+        
+    @Override
+        protected void onPause() {
+            super.onPause();
+             InGameSDK.getInstance().onPause();
+        }
+        
+    @Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+            InGameSDK.getInstance().onActivityResult(requestCode, resultCode, data);
+        }
+
 
 <b>Gọi hàm tương ứng với các chức năng mà SDK cung cấp cho từng thao tác:</b>
+
+
 ```
-　  Đăng ký: 							  ingame_sdk.callRegister();
-　　Đăng nhập:				       		ingame_sdk.callLogin();
-　　Đăng xuất: 							ingame_sdk.callLogout();
-　　Hiển thị thông tin tài khoản: 		ingame_sdk.callshowUserInfo();
+　  Đăng ký: 							ingame_sdk.callRegister();<br/>
+　　Đăng nhập:				       		ingame_sdk.callLogin();<br/>
+　　Đăng xuất: 							ingame_sdk.callLogout();<br/>
+　　Hiển thị thông tin tài khoản: 	    ingame_sdk.callshowUserInfo();<br/>
 　　Thanh toán: 							 ingame_sdk.callPayment(String game_order); // game_order:Mã giao dịch do 
-　　Nhà phát triển tự tạo ra (nhỏ hơn 50 ký tự)..
+　　Nhà phát triển tự tạo ra (nhỏ hơn 50 ký tự)..<br/>
+　　Invite Friend (Show sdk UI)         ingame_sdk.callInviteFriend();// Hiển thị giao diện mời bạn của SDK<br/>
+　　Get List FB friend:                 ingame_sdk.callGetFBFriendList(); //Lấy danh sách bạn trên facebook của người chơi<br/>
+　　Share FB message:                   ingame_sdk.callShareMessageFromGame(YOUR_MESSAGE, YOUR_LIST_FRIEND_ID); // Chia sẻ một đoạn text và tag bạn bè trên tường của người chơi<br/>
 ```
 
 

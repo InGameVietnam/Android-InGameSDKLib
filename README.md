@@ -19,9 +19,9 @@ InGame SDK is user and payment integrated system for your mobile application. Th
 
 ### I. Download SDK
 
-Download InGame SDK for Android here: https://github.com/ingamevietnam/android-ingamesdklib/archive/master.zip
+Download InGame SDK for Android here: https://github.com/InGameVietnam/Android-InGameSDKLib/archive/version-2.0.zip
 
-Or use any git tool, clone this url: https://github.com/ingamevietnam/android-ingamesdklib.git
+Or use any git tool, clone this url: https://github.com/InGameVietnam/Android-InGameSDKLib.git
 
 ###II. Integrate & configure SDK
 ####A. Integrate: 
