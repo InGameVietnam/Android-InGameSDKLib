@@ -16,25 +16,20 @@
         <com.ingamesdk.widget.IGTextView
             android:id="@+id/caption_id"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:padding="10dp"
-            android:textColor="#000000"
-            android:textSize="@dimen/text_size_18"
-            android:textStyle="bold" />
+            android:gravity="center_vertical|center_horizontal"
+	        android:background="@drawable/ingame_edittext_bg"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:textColor="@color/com_ingamesdk_color_mainColor" />
 
-        <View
-            android:id="@+id/userlist_divider"
-            android:layout_width="fill_parent"
-            android:layout_height="1px"
-            android:layout_below="@+id/caption_id"
-            android:background="@color/header_divider" />
 
         <ListView
             android:id="@+id/listUsers"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/userlist_divider"
+            android:layout_below="@+id/caption_id"
             android:divider="@android:color/transparent"
             android:paddingBottom="5dp"
             android:paddingTop="5dp" >

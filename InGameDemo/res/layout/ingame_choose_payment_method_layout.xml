@@ -14,18 +14,19 @@
     <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_tab_Mail"
+        android:id="@+id/btn_caption"
         android:orientation="vertical"
-        android:background="@drawable/ingame_rounded_title_shape"
         android:clickable="false"
-        android:gravity="center_horizontal|center_vertical">
+        android:gravity="center">
         <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-             android:id="@+id/caption_id"
+            android:id="@+id/caption_id"
+            android:background="@drawable/ingame_rounded_title_shape"
             android:text="@string/txt_ExpandBtn_Mail"
             android:textSize="@dimen/text_size_18"
-            android:textColor="@color/com_ingamesdk_color_mainColor"/>
+            android:textColor="@color/com_ingamesdk_color_mainColor"
+            android:gravity="center_vertical|center_horizontal"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +34,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingBottom="10dp"
+        android:paddingBottom="5dp"
         android:paddingTop="15dp" >
         <FrameLayout
             android:layout_width="match_parent"
@@ -52,13 +53,13 @@
                 android:src="@drawable/ingame_choose_payment_method_card" 
                 android:layout_gravity="start|center_vertical"/>
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/paymentcard_textname"
                 android:gravity="center"
                 android:padding="2dp"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/text_size_18"
+                android:textSize="@dimen/text_size_28"
                 android:layout_gravity="end|center_vertical"/>
         </FrameLayout>
         <FrameLayout
@@ -80,13 +81,13 @@
                 android:layout_gravity="start|center_vertical" />
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/paymentbank_textname"
                 android:gravity="center"
                 android:padding="2dp"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/text_size_18"
+                android:textSize="@dimen/text_size_28"
                 android:layout_gravity="end|center_vertical"/>
         </FrameLayout>
         <FrameLayout
@@ -105,15 +106,30 @@
                 android:src="@drawable/ingame_choose_payment_method_google" 
                 android:layout_gravity="start|center_vertical"/>
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/paymentgoogle_textname"
                 android:gravity="center"
                 android:padding="2dp"
-                android:textSize="@dimen/text_size_18"
+                android:textSize="@dimen/text_size_28"
                 android:textColor="@android:color/white"
                 android:layout_gravity="end|center_vertical"/>
         </FrameLayout>
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/customer_care"
+	        android:textColor="@color/com_ingamesdk_color_mainColor"/>
+        <ImageView 
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ingame_arrow_blue_down"/>
     </LinearLayout>
     </LinearLayout>
 </ScrollView>

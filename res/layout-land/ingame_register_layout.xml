@@ -254,14 +254,28 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
- <com.ingamesdk.widget.IGTextView
-     android:id="@+id/login_sdkversion"
+
+    <com.ingamesdk.widget.IGTextView
+        android:id="@+id/login_sdkversion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sdkversion"
-        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_margin="5dp"
-        android:layout_alignParentBottom="true"
+        android:text="@string/sdkversion"
+        android:textColor="#ffffff"
         android:textSize="@dimen/text_size_10" />
+
+    <ImageView
+        android:id="@+id/register_btnRestricted"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:alpha=".9"
+        android:paddingBottom="1dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ingame_restricted" />
+
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.ingame.demo;
 
+import java.util.List;
 import java.util.Random;
 
 import org.json.JSONException;
@@ -180,9 +181,9 @@ public class MainActivity extends Activity {
 		}
 
 		@Override
-		public void InviteFriendSuccessListener() {
+		public void InviteFriendSuccessListener(List arg0) {
 			// TODO Auto-generated method stub
-			System.out.println("XXXX invite friend success");
+			
 		}
 	}
 }

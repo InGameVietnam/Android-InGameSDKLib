@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:widget="http://schemas.android.com/apk/res-auto"	
+	android:id="@+id/google_payment_container"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:layout_gravity="center_horizontal"
@@ -14,13 +15,13 @@
         android:id="@+id/btn_tab_Mail"
         android:orientation="vertical"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/ingame_rounded_title_shape"
-        android:clickable="false"
-        android:gravity="center_horizontal|center_vertical">
+        android:clickable="false">
         <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-             android:id="@+id/caption_id"
+            android:background="@drawable/ingame_rounded_title_shape"
+            android:gravity="center"
+            android:id="@+id/caption_id"
             android:textSize="@dimen/text_size_18"
             android:textColor="@color/com_ingamesdk_color_mainColor"/>
      </LinearLayout>

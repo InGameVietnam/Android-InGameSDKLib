@@ -1,8 +1,11 @@
 <resources>
-    <string name="sdkversion">Version 2.0</string>
+
+    <string name="sdkversion">Version 2.1</string>
     <string name="login">Login</string>
     <string name="yes">OK</string>
     <string name="no">NO</string>
+    <string name="cancel">Cancel</string>
+    <string name="connecting">Connecting to the server... </string>
     <string name="ACCOUNT">ACCOUNT</string>
     <string name="LOG_OUT">LOG OUT</string>
     <string name="email">Email (optional)</string>
@@ -38,7 +41,7 @@
     <string name="txt_login_ingame">Ingame</string>
     <string name="txt_login_quick">Quick login</string>
     <string name="txt_payment_card">Card</string>
-    <string name="txt_payment_bank">E-Banking</string>
+    <string name="txt_payment_bank">Bank</string>
     <string name="txt_payment_google">Google</string>
     <string name="TXT_TAB_USERINFOR">User Information</string>
     <string name="TXT_TAB_TRANSACTION">Transaction Log</string>
@@ -62,7 +65,7 @@
     <string name="payment">Payment</string>
     <string name="payment_via">Payment via</string>
     <string name="phone_card">Phone card</string>
-    <string name="choose_username">Please select an account</string>
+    <string name="choose_username">Accounts List</string>
     <string name="DELETE_USER_QUESTION">Want to delete this account?</string>
     <string name="network_problem_title">Network Error</string>
     <string name="LOGIN_SUCCESS">Welcome @</string>
@@ -83,15 +86,14 @@
     <string name="game_order">The length of game_order field must less than 50 characters</string>
     <string name="term_title">Terms of Use</string>
     <string name="term_agree">I agree to the Terms</string>
-    
-    
-    
+
     <!-- PAYMENT METHODS -->
     <string name="payment_via_card">CARD</string>
     <string name="payment_via_bank">BANK</string>
     <string name="payment_via_google">GOOGLE IAP</string>
     <string name="payment_via_apple">APPLE IAP</string>
     <string name="payment_via_wp">WINDOWS PHONE IAP</string>
+    <string name="txt_customer_care">* Customer Care</string>
 
     <!-- card payment -->
     <string name="invalid_field_notification">Card info is invalid, please check and try again</string>
@@ -102,7 +104,7 @@
     <string name="txt_card_serial">Please fill serial number</string>
     <string name="txt_card_pinnumber">Please fill card code</string>
     <string name="txt_card_info">Regulations conversion list</string>
-	<string name="txt_regulations_title">Regulations conversion</string>
+    <string name="txt_regulations_title">Regulations conversion</string>
     <string name="paymentSuccessful">Payment successful</string>
     <string name="captcha_charactor">Enter the correct characters in the image above</string>
 
@@ -113,37 +115,40 @@
     <string name="invalid_bank_notification">You have not yet chosen type of bank, please check and try again!!</string>
     <string name="txt_bank_info">Choose money pack:</string>
     <string name="confirm_bank_payment">Click submit after finished payment on website</string>
+    <string name="cancel_bank_payment">The payment process was cancelled. Please try again.</string>
+    <string name="connect_bank_payment">Can not connect to server.<br/>Please try again.</string>
 
     <!-- paymnet via google -->
     <string name="txt_Method_Name_Google">Payment via Google</string>
     <string name="transaction_confirm">Transaction information</string>
-    
     <string name="txt_Title_ForgotPass">Forgot Password</string>
-	<string name="txt_ExpandBtn_Mail">Via Email</string>
-	<string name="txt_Expand_Decription_Mail">* Enter your email address to reset your password. <br>You may need to check your spam folder.</br></string>
-	<string name="txt_ExpandBtnText_Mail">Submit</string>
-	
-	<string name="txt_ExpandBtn_SMS">Via SMS</string>
-	<string name="txt_Expand_Decription_SMS">* Compose a message with syntax: <br><b>Ingame MK</b> [<b>USERNAME</b>] send to <b>8698</b></br><br>* Support only to mobile network operators : </br><br><b>Viettel, Vinaphone, Mobiphone, VietnamMobi.</b></br><br>* Cost 500 VND/sms</br></string>
-	<string name="txt_ExpandBtnText_SMS">Send SMS</string>
-	
-	<!-- friend list -->
-	<string name="txt_friendlist">Friend Lists</string>
-	<string name="title_pickfriend">Please pick who you want to send</string>
-	<string name="msg_post_completed">Sent successfully!</string>
-	<string name="post_message">Come and play game with me!</string>
-	<string name="txt_btn_send">Send</string>
-	
-	<!-- More game -->
-	<string name="caption_moregame">More Games</string>
-	<string name="downloaded_players_text">players</string>
-	
-	<!--  footer zone -->
-	<string name="txt_userinfo_title">Account</string>
-	<string name="txt_moregame_title">MoreGames</string>
-	<string name="txt_share_title">Share</string>
-	<string name="txt_exit_title">Logout</string>
-	
-	<!-- AlertDialog -->
-	<string name="txt_AlertDialog_Title">Notification</string>
+    <string name="txt_ExpandBtn_Mail">Via Email</string>
+    <string name="txt_Expand_Decription_Mail">* Enter your email address to reset your password. <br>You may need to check your spam folder.</br></string>
+    <string name="txt_ExpandBtnText_Mail">Submit</string>
+    <string name="txt_ExpandBtn_SMS">Via SMS</string>
+    <string name="txt_Expand_Decription_SMS">* Compose a message with syntax: <br><b>Ingame MK</b> <b>USERNAME</b> send to <b>8098</b></br><br>* Support only to mobile network operators : </br><br><b>Viettel, Vinaphone, Mobiphone, VietnamMobi.</b></br><br>* Cost 500 VND/sms</br></string>
+    <string name="txt_ExpandBtnText_SMS">Send SMS</string>
+
+    <!-- friend list -->
+    <string name="txt_friendlist">Friend Lists</string>
+    <string name="title_pickfriend">Please pick who you want to send</string>
+    <string name="msg_post_completed">Sent successfully!</string>
+    <string name="post_message">Come and play game with me!</string>
+    <string name="txt_btn_send">Send</string>
+
+    <!-- More game -->
+    <string name="caption_moregame">More Games</string>
+    <string name="downloaded_players_text">players</string>
+    <string name="giftcode">Giftcode - Guide</string>
+
+    <!-- footer zone -->
+    <string name="txt_userinfo_title">Account</string>
+    <string name="txt_moregame_title">MoreGames</string>
+    <string name="txt_share_title">Share</string>
+    <string name="txt_exit_title">Logout</string>
+    <string name="txt_toast_logout_notify">Press again to logout</string>
+
+    <!-- AlertDialog -->
+    <string name="txt_AlertDialog_Title">Notification</string>
+
 </resources>

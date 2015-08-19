@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:widget="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:gravity="center">
      <com.ingamesdk.widget.IGTextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="?android:attr/spinnerItemStyle"
+        android:layout_gravity="center_horizontal|center_vertical"
         android:id="@+id/text"
-        android:textSize="@dimen/text_size_15"
+        android:textSize="@dimen/text_size_18"
         android:textStyle="bold"
-        
-        android:padding="10dp"/>
-</LinearLayout>
+        android:textColor="@android:color/white"
+        android:padding="5dp"/>
+     
+     <ImageView 
+         android:layout_width="25dp"
+         android:layout_height="25dp"
+         android:layout_gravity="end|center_vertical"
+         android:src="@drawable/ingame_arrow_down"
+         android:layout_marginRight="15dp"/>
+</FrameLayout>

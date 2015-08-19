@@ -3,8 +3,7 @@
     xmlns:widget="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    >
+    android:layout_gravity="center" >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -59,7 +58,6 @@
                             android:background="@android:color/transparent"
                             android:ems="15"
                             android:hint="Tài khoản"
-                            android:inputType="textPassword"
                             android:textColor="@color/edittext_color"
                             android:textColorHighlight="#FF434343"
                             android:textCursorDrawable="@drawable/ingame_textfield_cusor"
@@ -219,9 +217,10 @@
 
             <LinearLayout
                 android:id="@+id/login_btnRegister"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:orientation="vertical" >
 
@@ -258,14 +257,28 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
- <com.ingamesdk.widget.IGTextView
-     android:id="@+id/login_sdkversion"
+
+    <com.ingamesdk.widget.IGTextView
+        android:id="@+id/login_sdkversion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sdkversion"
-        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_margin="5dp"
-        android:layout_alignParentBottom="true"
+        android:text="@string/sdkversion"
+        android:textColor="#ffffff"
         android:textSize="@dimen/text_size_10" />
+
+    <ImageView
+        android:id="@+id/login_btnRestricted"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:alpha=".9"
+        android:paddingBottom="1dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ingame_restricted" />
+
 </RelativeLayout>

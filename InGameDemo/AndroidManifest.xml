@@ -75,6 +75,22 @@
             android:configChanges="orientation|keyboardHidden|screenSize|locale"
             android:windowSoftInputMode="adjustPan" />
 
+        <!-- for Google adWords -->
+        <receiver
+            android:name="com.google.ads.conversiontracking.InstallReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <!-- for google adWords tracking download app -->
+        <meta-data
+            android:name="com.google.ads.conID"
+            android:value="\ 955620859" />
+        <meta-data
+            android:name="com.google.ads.conLabel"
+            android:value="\ 2hYCCL6Fp14Q-7vWxwM" />
+
         <!-- for app flyer -->
         <receiver
             android:name="com.appsflyer.MultipleInstallBroadcastReceiver"
