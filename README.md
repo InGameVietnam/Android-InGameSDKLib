@@ -185,7 +185,7 @@ The SDK includes 2 parts
 		}
 
 		@Override
-		public void InviteFriendSuccessListener() {
+		public void InviteFriendSuccessListener(List<String> userIdlist) {
 			// TODO Auto-generated method stub
 		}
 	}
