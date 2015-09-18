@@ -44,7 +44,7 @@
 
                     <com.ingamesdk.widget.IGEditText
                         android:id="@+id/register_txtname"
-                        android:layout_width="240dp"
+                        android:layout_width="fill_parent"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
                         android:layout_gravity="center"
@@ -60,17 +60,6 @@
                         android:textColorHighlight="#FF434343"
                         android:textCursorDrawable="@drawable/ingame_textfield_cusor"
                         android:textSize="@dimen/text_size_15" />
-
-                    <ImageButton
-                        android:id="@+id/register_btnClearName"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="5dp"
-                        android:background="@android:color/transparent"
-                        android:paddingRight="5dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ingame_edittext_clear" />
                 </LinearLayout>
 
                 <View
@@ -126,7 +115,7 @@
 
                     <com.ingamesdk.widget.IGEditText
                         android:id="@+id/register_txtphone"
-                        android:layout_width="240dp"
+                        android:layout_width="fill_parent"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
                         android:layout_gravity="center"
@@ -142,17 +131,6 @@
                         android:textColorHighlight="#FF434343"
                         android:textCursorDrawable="@drawable/ingame_textfield_cusor"
                         android:textSize="@dimen/text_size_15" />
-
-                    <ImageButton
-                        android:id="@+id/register_btnClearPhone"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="5dp"
-                        android:background="@android:color/transparent"
-                        android:paddingRight="5dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ingame_edittext_clear" />
                 </LinearLayout>
 
                 <View
@@ -167,7 +145,7 @@
 
                     <com.ingamesdk.widget.IGEditText
                         android:id="@+id/register_txtEmail"
-                        android:layout_width="240dp"
+                        android:layout_width="fill_parent"
                         android:layout_height="40dp"
                         android:layout_alignParentLeft="true"
                         android:layout_gravity="center"
@@ -183,17 +161,6 @@
                         android:textColorHighlight="#FF434343"
                         android:textCursorDrawable="@drawable/ingame_textfield_cusor"
                         android:textSize="@dimen/text_size_15" />
-
-                    <ImageButton
-                        android:id="@+id/register_btnClearEmail"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginRight="5dp"
-                        android:background="@android:color/transparent"
-                        android:paddingRight="5dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/ingame_edittext_clear" />
                 </LinearLayout>
             </LinearLayout>
 

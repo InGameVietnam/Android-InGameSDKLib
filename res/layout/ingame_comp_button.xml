@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/comp_parent"
-    android:layout_width="50dp"
-    android:layout_height="50dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="horizontal" >
 
     <ImageView
@@ -12,5 +12,139 @@
         android:layout_marginRight="2dp"
         android:background="@android:color/transparent"
         android:src="@drawable/ingame_button" />
+
+    <LinearLayout
+        android:id="@+id/comp_button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+         >
+
+        <LinearLayout
+            android:id="@+id/comp_button_item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@color/button_item"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/ingame_menu_5" />
+
+            <TextView
+                android:id="@+id/comp_button_tvItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff0095da"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="#ffffffff"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comp_button_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@color/button_item"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/ingame_menu_6" />
+
+            <TextView
+                android:id="@+id/comp_button_tvItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff0095da"
+                android:padding="3dp"
+                android:text="PAYMENT"
+                android:textAlignment="center"
+                android:textColor="#ffffffff"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comp_button_item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@color/button_item"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/ingame_menu_7" />
+
+            <TextView
+                android:id="@+id/comp_button_tvItem3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff0095da"
+                android:gravity="center_horizontal"
+                android:minWidth="40dp"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="#ffffffff"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comp_button_item4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@color/button_item"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/ingame_menu_8" />
+
+            <TextView
+                android:id="@+id/comp_button_tvItem4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff0095da"
+                android:minWidth="40dp"
+                android:padding="3dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="#ffffffff"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

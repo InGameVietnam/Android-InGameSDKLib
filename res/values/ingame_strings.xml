@@ -8,8 +8,8 @@
     <string name="connecting">Connecting to the server... </string>
     <string name="ACCOUNT">ACCOUNT</string>
     <string name="LOG_OUT">LOG OUT</string>
-    <string name="email">Email (optional)</string>
-    <string name="phone">Phonenumber (optional)</string>
+    <string name="email">Email</string>
+    <string name="phone">Phonenumber</string>
     <string name="email_phone">Please enter your Email</string>
     <string name="submit">Submit</string>
     <string name="refresh">Refresh</string>

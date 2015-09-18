@@ -19,8 +19,8 @@
     <string name="please_wait">Vui lòng chờ...</string>
     <string name="invalid_email">Email không hợp lệ.</string>
     <string name="invalid_phone">Số điện thoại không hợp lệ.</string>
-    <string name="email">Email (Không bắt buộc)</string>
-    <string name="phone">Điện thoại (Không bắt buộc)</string>
+    <string name="email">Email</string>
+    <string name="phone">Điện thoại</string>
     <string name="email_phone">Vui lòng nhập Email của bạn</string>
 
     <!-- Register -->

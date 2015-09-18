@@ -61,22 +61,12 @@
                             android:background="@android:color/transparent"
                             android:ems="15"
                             android:hint="Tài khoản"
+                            android:imeOptions="flagNoFullscreen"
                             android:inputType="text"
                             android:textColor="@color/edittext_color"
                             android:textColorHighlight="#FF434343"
                             android:textCursorDrawable="@drawable/ingame_textfield_cusor"
                             android:textSize="@dimen/text_size_15" />
-
-                        <ImageButton
-                            android:id="@+id/register_btnClearName"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginRight="5dp"
-                            android:background="@android:color/transparent"
-                            android:paddingRight="5dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ingame_edittext_clear" />
                     </LinearLayout>
 
                     <View
@@ -101,6 +91,7 @@
                             android:background="@android:color/transparent"
                             android:ems="15"
                             android:hint="Mật khẩu"
+                            android:imeOptions="flagNoFullscreen"
                             android:inputType="textPassword"
                             android:textColor="@color/edittext_color"
                             android:textColorHighlight="#FF434343"
@@ -143,22 +134,12 @@
                             android:background="@android:color/transparent"
                             android:ems="15"
                             android:hint="Điện thoại"
+                            android:imeOptions="flagNoFullscreen"
                             android:inputType="number"
                             android:textColor="@color/edittext_color"
                             android:textColorHighlight="#FF434343"
                             android:textCursorDrawable="@drawable/ingame_textfield_cusor"
                             android:textSize="@dimen/text_size_15" />
-
-                        <ImageButton
-                            android:id="@+id/register_btnClearPhone"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginRight="5dp"
-                            android:background="@android:color/transparent"
-                            android:paddingRight="5dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ingame_edittext_clear" />
                     </LinearLayout>
 
                     <View
@@ -184,22 +165,12 @@
                             android:background="@android:color/transparent"
                             android:ems="15"
                             android:hint="Email"
+                            android:imeOptions="flagNoFullscreen"
                             android:inputType="textEmailAddress"
                             android:textColor="@color/edittext_color"
                             android:textColorHighlight="#FF434343"
                             android:textCursorDrawable="@drawable/ingame_textfield_cusor"
                             android:textSize="@dimen/text_size_15" />
-
-                        <ImageButton
-                            android:id="@+id/register_btnClearEmail"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginRight="5dp"
-                            android:background="@android:color/transparent"
-                            android:paddingRight="5dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ingame_edittext_clear" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

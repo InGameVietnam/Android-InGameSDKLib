@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
 		m_InGameSDK.setListener(listener);
 		m_InGameSDK.init(this, true, true, "");
 		m_InGameSDK.setgameOrderId(random());
-		tvInfo = (TextView) findViewById(R.id.tvInfo);
+		tvInfo = (TextView) findViewById(R.id.main_tvInfo);
 		btnLogin = (Button) findViewById(R.id.btnLogin);
 		btnPayment = (Button) findViewById(R.id.btnPayment);
 		btnShowUser = (Button) findViewById(R.id.btnShowUser);
@@ -139,7 +139,6 @@ public class MainActivity extends Activity {
 		m_InGameSDK.callLogout();
 	}
 
-
 	public class Listener implements IGListenerInterface {
 
 		@Override
@@ -181,9 +180,16 @@ public class MainActivity extends Activity {
 		}
 
 		@Override
+		public void LoginFailListener() {
+		System.out.println(">>>>>>>>>>>>>>>LOGIN FAILLLLLLLLL");
+
+		}
+
+		@Override
 		public void InviteFriendSuccessListener(List arg0) {
 			// TODO Auto-generated method stub
 			
 		}
+
 	}
 }

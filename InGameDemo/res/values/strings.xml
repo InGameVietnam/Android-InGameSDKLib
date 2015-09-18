@@ -2,10 +2,11 @@
 
     <string name="app_name">InGameDemo</string>
     <!-- <string name="facebook_appId">754729157931095</string> -->
-    <string name="sdk_appId">4150ee1fedfb016340a5d7f0a5bbf082</string>
-    <string name="sdk_appKey">c55cc6a3b13c8f02dcf11f5c516a941c</string>
+    <string name="App_Id">4150ee1fedfb016340a5d7f0a5bbf082</string>
+    <string name="App_Key">c55cc6a3b13c8f02dcf11f5c516a941c</string>
     <string name="facebook_appId">1579816265626356</string>
     <string name="googleplay_appId">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkympMgT0jnO4ocaPq7i4XBBdyIclgfzKNWnNNIZ3/B0pmOwx3QKzYIJuxo4G9S9kMK0F9k86PsnU9g8tbrVxW2hs85sfCI1etz6PScGM/IEX9afHzWYjUKDH//t6fIOu+n/B87E+BF9JgdhkWuvv+ztSlXfGGM2oRCcxXCfWlkA1Z1rTTojDEcBdHsK++7fxc4tTvF4OHTmCr3TlkTg7fUOyJHets5Wz8M36cuw4OPaW+uv+dxY/ZJHQSLaIb0TJVXljDYcLdFZgwoC+U+NSsOq/5FVvpqiJ4QfqDWdlsFI2ZF/sF7holI0Kb+PyiVOUUAwXU6F11h+/gPs/h/qYWQIDAQAB</string>
     <string name="google_ads_consId">955620859</string>
     <string name="google_ads_consLabel">F78xCLmCtV4Q-7vWxwM</string>
+	  
 </resources>

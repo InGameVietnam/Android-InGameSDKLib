@@ -10,7 +10,7 @@
         android:gravity="center|top" >
 
         <TextView
-            android:id="@+id/tvInfo"
+            android:id="@+id/main_tvInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ffff00"
