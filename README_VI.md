@@ -61,9 +61,9 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 > Thay ```<application_license_key>```bằng ```giấy phép ứng dụng (license key)``` của bạn.<br/>
 > Thay ```<ingame_application_id>```bằng ```app id được cấp bởi ingame``` của bạn.<br/>
 > Thay ```<ingame_application_key>```bằng ```app key được cấp bởi ingame``` của bạn.<br/>
-> Replace ```<ingame_googleplay_id>``` with your ```google play id được cấp bởi ingame```.<br/>
-> Replace ```<ingame_google_adwords_id>``` with your ```google adwords id được cấp bởi ingame```.<br/>
-> Replace ```<ingame_google_adwords_label>``` with your ```google adwords label được cấp bởi ingame```.<br/>
+> Thay ```<ingame_googleplay_id>``` bằng ```google play id được cấp bởi ingame```.<br/>
+> Thay ```<ingame_google_adwords_id>``` bằng ```google adwords id được cấp bởi ingame```.<br/>
+> Thay ```<ingame_google_adwords_label>``` bằng ```google adwords label được cấp bởi ingame```.<br/>
 
 
 <b>Cấu hình strings.xml</b>
