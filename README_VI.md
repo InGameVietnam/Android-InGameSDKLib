@@ -61,7 +61,9 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 > Thay ```<application_license_key>```bằng ```giấy phép ứng dụng (license key)``` của bạn.<br/>
 > Thay ```<ingame_application_id>```bằng ```app id được cấp bởi ingame``` của bạn.<br/>
 > Thay ```<ingame_application_key>```bằng ```app key được cấp bởi ingame``` của bạn.<br/>
-
+> Thay ```<ingame_googleplay_id>``` bằng ```google play id được cấp bởi ingame```.<br/>
+> Thay ```<ingame_google_adwords_id>``` bằng ```google adwords id được cấp bởi ingame```.<br/>
+> Thay ```<ingame_google_adwords_label>``` bằng ```google adwords label được cấp bởi ingame```.<br/>
 
 
 <b>Cấu hình strings.xml</b>
@@ -73,6 +75,9 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 　　　　<string name="google_license_key"><application_license_key></string>
 　　　　<string name="App_Id"><ingame_application_id></string>
 　　　　<string name="App_Key"><ingame_application_key></string>
+　　　　<string name="googleplay_appId"><ingame_googleplay_id></string>
+　　　　<string name="google_ads_consId"><ingame_google_adwords_id></string>
+　　　　<string name="google_ads_consLabel"><ingame_google_adwords_label></string>
 ``` 
 <b>Cấu hình AndroidMainfest.xml</b>
 
@@ -111,6 +116,24 @@ Tương tự như trên bạn chỉ cần sao chép và dán vào thư mục <b>
 　　　　    android:value="@string/App_Id" />
     <meta-data android:name="com.IngameSDK.AppKey" 
         android:value="@string/App_Key" />
+        
+         <!-- for Google adWords -->
+        <receiver
+            android:name="com.google.ads.conversiontracking.InstallReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- for google adWords tracking download app -->
+
+        <meta-data
+            android:name="com.google.ads.conID"
+            android:value="@string/google_ads_consId" />
+        <meta-data
+            android:name="com.google.ads.conLabel"
+            android:value="@string/google_ads_consLabel" />
 
      <!--  for app flyer -->
         <receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">

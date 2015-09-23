@@ -55,6 +55,9 @@ https://github.com/InGameVietnam/Android-InGameSDKLib.git
 >Replace <application_license_key> with your license key.   （商务提供,谷歌支付）<br/>
 >Replace <ingame_application_id> with your app id supplied by ingame. （商务提供）<br/>
 >Replace <ingame_application_key> with your app key supplied by ingame. （商务提供）<br/>
+> Replace ```<ingame_googleplay_id>``` with your ```google play id supplied by ingame （商务提供）```.<br/>
+> Replace ```<ingame_google_adwords_id>``` with your ```google adwords id supplied by ingame （商务提供）```.<br/>
+> Replace ```<ingame_google_adwords_label>``` with your ```google adwords label supplied by ingame （商务提供）```.<br/>
 
 <b>配置strings.xml</b>
 　　
@@ -62,7 +65,10 @@ https://github.com/InGameVietnam/Android-InGameSDKLib.git
 　　　　<string name="facebook_appId"><your_facebook_application_id></string>
 　　　　<string name="google_license_key"><application_license_key></string>
 　　　　<string name="App_Id"><ingame_application_id></string>
-　　　　<string name="App_Key"><ingame_application_key></string>
+　　　　<string name="App_Key"><ingame_application_key></string
+　　　　<string name="googleplay_appId"><ingame_googleplay_id></string>
+　　　　<string name="google_ads_consId"><ingame_google_adwords_id></string>
+　　　　<string name="google_ads_consLabel"><ingame_google_adwords_label></string>
 ``` 
 <b>配置AndroidMainfest.xml</b>
 -   添加< permission >标签授予访问系统:
@@ -106,7 +112,26 @@ https://github.com/InGameVietnam/Android-InGameSDKLib.git
 　　　　    android:value="@string/App_Id" />
         <meta-data android:name="com.IngameSDK.AppKey" 
             android:value="@string/App_Key" />
-       
+
+  	<!-- for Google adWords -->
+        <receiver
+            android:name="com.google.ads.conversiontracking.InstallReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- for google adWords tracking download app -->
+
+        <meta-data
+            android:name="com.google.ads.conID"
+            android:value="@string/google_ads_consId" />
+        <meta-data
+            android:name="com.google.ads.conLabel"
+            android:value="@string/google_ads_consLabel" />
+            
+
          <!--  for app flyer -->
         <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
 	<intent-filter>
