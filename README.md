@@ -76,7 +76,6 @@ The SDK includes 2 parts
 　　　　<string name="google_license_key"><application_license_key></string>
 　　　　<string name="App_Id"><ingame_application_id></string>
 　　　　<string name="App_Key"><ingame_application_key></string>
-　　　　<string name="googleplay_appId"><ingame_googleplay_id></string>
 　　　　<string name="google_ads_consId"><ingame_google_adwords_id></string>
 　　　　<string name="google_ads_consLabel"><ingame_google_adwords_label></string>
 ``` 
