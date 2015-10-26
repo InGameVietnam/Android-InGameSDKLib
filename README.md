@@ -61,7 +61,6 @@ The SDK includes 2 parts
 > Replace ```<application_license_key>``` with your ```license key```.<br/>
 > Replace ```<ingame_application_id>``` with your ```app id supplied by ingame```.<br/>
 > Replace ```<ingame_application_key>``` with your ```app key supplied by ingame```.<br/>
-> Replace ```<ingame_googleplay_id>``` with your ```google play id supplied by ingame```.<br/>
 > Replace ```<ingame_google_adwords_id>``` with your ```google adwords id supplied by ingame```.<br/>
 > Replace ```<ingame_google_adwords_label>``` with your ```google adwords label supplied by ingame```.<br/>
 
