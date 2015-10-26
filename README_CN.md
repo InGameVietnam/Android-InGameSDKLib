@@ -55,7 +55,6 @@ https://github.com/InGameVietnam/Android-InGameSDKLib.git
 >Replace <application_license_key> with your license key.   （商务提供,谷歌支付）<br/>
 >Replace <ingame_application_id> with your app id supplied by ingame. （商务提供）<br/>
 >Replace <ingame_application_key> with your app key supplied by ingame. （商务提供）<br/>
-> Replace ```<ingame_googleplay_id>``` with your ```google play id supplied by ingame （商务提供）```.<br/>
 > Replace ```<ingame_google_adwords_id>``` with your ```google adwords id supplied by ingame （商务提供）```.<br/>
 > Replace ```<ingame_google_adwords_label>``` with your ```google adwords label supplied by ingame （商务提供）```.<br/>
 
@@ -66,7 +65,6 @@ https://github.com/InGameVietnam/Android-InGameSDKLib.git
 　　　　<string name="google_license_key"><application_license_key></string>
 　　　　<string name="App_Id"><ingame_application_id></string>
 　　　　<string name="App_Key"><ingame_application_key></string
-　　　　<string name="googleplay_appId"><ingame_googleplay_id></string>
 　　　　<string name="google_ads_consId"><ingame_google_adwords_id></string>
 　　　　<string name="google_ads_consLabel"><ingame_google_adwords_label></string>
 ``` 
